@@ -1,0 +1,2235 @@
+- var tree_view             = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                            .row
+                              .col-sm-12.col-xl-6
+                                .card
+                                  .card-header
+                                    h5.main-title Html folder Structure
+                                  .card-body
+                                    #treeBasic
+                                      ul
+                                        li(data-jstree='{"opened":true}')
+                                          | Viho
+                                          ul
+                                            li(data-jstree='{"opened":false}')
+                                              | assets
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | ajax
+                                                  ul
+                                                    li.txt-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                      | api.txt
+                                                    li.txt-icon(data-jstree='{"type":"file"}')
+                                                      | arrays.txt
+                                                    li.txt-icon(data-jstree='{"type":"file"}')
+                                                      | object.txt
+                                                    li.txt-icon(data-jstree='{"type":"file"}')
+                                                      | object_nested.txt
+                                                    li.txt-icon(data-jstree='{"type":"file"}')
+                                                      | orthogonal.txt
+                                                    li.php-icon(data-jstree='{"type":"file"}')
+                                                      | post.php
+                                                    li.php-icon(data-jstree='{"type":"file"}')
+                                                      | server-processing.php
+                                                li(data-jstree='{"opened":false}')
+                                                  | audio
+                                                  ul
+                                                    li.music-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                      | horse.ogg
+                                                li(data-jstree='{"opened":false}')
+                                                  | css
+                                                  ul
+                                                    li.css-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                      | animate.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | aos.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | bootstrap.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | button-builder.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | calendar.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | chartist.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | color-1.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | color-2.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | color-3.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | color-4.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | color-5.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | color-6.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | datatable-extension.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | datatables.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | date-picker.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | daterange-picker.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | dropzone.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | feather-icon.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | flag-icon.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | fontawesome.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | icofont.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | image-cropper.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | ionic-icon.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | jsgrid.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | mapsjs-ui.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | material-design-icon.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | owlcarousel.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | page-builder.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | pe7-icon.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | photoswipe.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | print.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | prism.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | range-slider.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | rating.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | responsive.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | scrollable.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | select2.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | simple-line-icon.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | simple-mde.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | sticky.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | style.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | summernote.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | svg-icon.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | sweetalert2.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | themify.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | timepicker.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | todo.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | tour.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | tree.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | typicon-icon.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | vector-map.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | vertical-menu.css
+                                                    li.css-icon(data-jstree='{"type":"file"}')
+                                                      | whether-icon.css
+                                                li(data-jstree='{"opened":false}')
+                                                  | fonts
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | calendar
+                                                    li(data-jstree='{"opened":false}')
+                                                      | feather
+                                                    li(data-jstree='{"opened":false}')
+                                                      | flag-icon
+                                                    li(data-jstree='{"opened":false}')
+                                                      | font-awesome
+                                                    li(data-jstree='{"opened":false}')
+                                                      | ico
+                                                    li(data-jstree='{"opened":false}')
+                                                      | ionic-icon
+                                                    li(data-jstree='{"opened":false}')
+                                                      | material-design-icon
+                                                    li(data-jstree='{"opened":false}')
+                                                      | pe7-icon
+                                                    li(data-jstree='{"opened":false}')
+                                                      | simple-line-icon
+                                                    li(data-jstree='{"opened":false}')
+                                                      | summernote
+                                                    li(data-jstree='{"opened":false}')
+                                                      | themify
+                                                    li(data-jstree='{"opened":false}')
+                                                      | typicon-icon
+                                                li(data-jstree='{"opened":false}')
+                                                  | images
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | appointment
+                                                    li(data-jstree='{"opened":false}')
+                                                      | avtar
+                                                    li(data-jstree='{"opened":false}')
+                                                      | banner
+                                                    li(data-jstree='{"opened":false}')
+                                                      | big-lightgallry
+                                                    li(data-jstree='{"opened":false}')
+                                                      | big-masonry
+                                                    li(data-jstree='{"opened":false}')
+                                                      | blog
+                                                    li(data-jstree='{"opened":false}')
+                                                      | button_builder
+                                                    li(data-jstree='{"opened":false}')
+                                                      | calender
+                                                    li(data-jstree='{"opened":false}')
+                                                      | checkout
+                                                    li(data-jstree='{"opened":false}')
+                                                      | dashboard
+                                                    li(data-jstree='{"opened":false}')
+                                                      | dashboard-2
+                                                    li(data-jstree='{"opened":false}')
+                                                      | ecommerce
+                                                    li(data-jstree='{"opened":false}')
+                                                      | email
+                                                    li(data-jstree='{"opened":false}')
+                                                      | email-template
+                                                    li(data-jstree='{"opened":false}')
+                                                      | faq
+                                                    li(data-jstree='{"opened":false}')
+                                                      | job-search
+                                                    li(data-jstree='{"opened":false}')
+                                                      | landing
+                                                    li(data-jstree='{"opened":false}')
+                                                      | lightgallry
+                                                    li(data-jstree='{"opened":false}')
+                                                      | logo
+                                                    li(data-jstree='{"opened":false}')
+                                                      | masonry
+                                                    li(data-jstree='{"opened":false}')
+                                                      | notification
+                                                    li(data-jstree='{"opened":false}')
+                                                      | other-images
+                                                    li(data-jstree='{"opened":false}')
+                                                      | product
+                                                    li(data-jstree='{"opened":false}')
+                                                      | range-slider
+                                                    li(data-jstree='{"opened":false}')
+                                                      | sidebar-image
+                                                    li(data-jstree='{"opened":false}')
+                                                      | sidebar-pattern
+                                                    li(data-jstree='{"opened":false}')
+                                                      | slider
+                                                    li(data-jstree='{"opened":false}')
+                                                      | slider-auto-width
+                                                    li(data-jstree='{"opened":false}')
+                                                      | social-app
+                                                    li(data-jstree='{"opened":false}')
+                                                      | tree
+                                                    li(data-jstree='{"opened":false}')
+                                                      | user
+                                                    li(data-jstree='{"opened":false}')
+                                                      | user-card
+                                                    li(data-jstree='{"opened":false}')
+                                                      | welcome
+                                                    li.img-icon
+                                                      | color-picker.png
+                                                    li.img-icon
+                                                      | viho-logo1.png
+                                                    li.img-icon
+                                                      | favicon.png
+                                                    li.svg-icon
+                                                      | hour.svg
+                                                    li.img-icon
+                                                      | js-grid.png
+                                                    li.svg-icon
+                                                      | min.svg
+                                                    li.svg-icon
+                                                      | sec.svg
+                                                    li.img-icon
+                                                      | settings.png
+                                                    li.img-icon
+                                                      | smiley.png
+                                                    li.img-icon
+                                                      | sort_asc.png
+                                                    li.img-icon
+                                                      | sort_asc_disabled.png
+                                                    li.img-icon
+                                                      | sort_both.png
+                                                    li.img-icon
+                                                      | sort_desc.png
+                                                    li.img-icon
+                                                      | sort_desc_disabled.png
+                                                    li.img-icon
+                                                      | User.jpg
+                                                li(data-jstree='{"opened":false}')
+                                                  | js
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | animation
+                                                      ul
+                                                        li.js-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                          | animate-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | aos
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | aos.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | aos-init.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | scroll-reveal
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | reveal-custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | scrollreveal.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | tilt
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | tilt.jquery.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | tilt-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | wow
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | wow.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | wow-init.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | bookmark
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | custom.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery.validate.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | bootstrap
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | bootstrap.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | popper.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | button-builder
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | clipboard.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | colorpicker.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | extend-1.0.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | generator.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | calendar
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | app.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | calendars.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | chance.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | inital.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | moment.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | schedules.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | tui-calendar.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | tui-code-snippet.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | tui-date-picker.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | tui-time-picker.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | chart
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | apex-chart
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | apex-chart.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | chart-custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | moment.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | stock-prices.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | chartist
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | chartist.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | chartist-custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | chartist-plugin-tooltip.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | chartjs
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | chart.custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | chart.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | flot-chart
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | excanvas.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | excanvas.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | flot-script.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.canvas.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.categories.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.crosshair.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.errorbars.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.fillbetween.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.image.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.navigate.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.pie.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.resize.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.selection.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.stack.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.symbol.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.threshold.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.flot.time.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | google
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | google-chart.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | google-chart-loader.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | knob
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | knob.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | knob-chart.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | morris-chart
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | morris.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | morris.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | morris-script.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | prettify.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | raphael.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | peity-chart
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | peity.jquery.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | peity-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | sparkline
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | sparkline.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | sparkline-script.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | clipboard
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | clipboard.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | clipboard-script.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | contacts
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | custom.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | counter
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | counter-custom.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery.counterup.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery.waypoints.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | custom-card
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | custom-card.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | dashboard
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | dashboard_2.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | default.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | datatable
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | datatable-extension
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | buttons.bootstrap4.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | buttons.colVis.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | buttons.html5.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | buttons.print.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.autoFill.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.bootstrap4.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.buttons.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.colReorder.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.fixedHeader.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.keyTable.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.responsive.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.rowReorder.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.scroller.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dataTables.select.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jszip.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | pdfmake.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | responsive.bootstrap4.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | vfs_fonts.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | datatables
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | datatable.custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.dataTables.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | datepicker
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | date-picker
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | datepicker.custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | datepicker.en.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | datepicker.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | daterange-picker
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | daterangepicker.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | daterange-picker.custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | moment.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | date-time-picker
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | datetimepicker.custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | moment.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | tempusdominus-bootstrap-4.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | dragable
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery-ui.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | sortable.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | sortable-custom.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | drilldown
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | dropdown-collapse-main.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | dropdown-coolapse-menu-aim.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | dropzone
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | dropzone.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | dropzone-scrip.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | dropzone-script.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | editor
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ace-editor
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | ace.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | ace-custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | mode-css.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | mode-html.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | mode-javascript.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | mode-php.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | theme-monokai.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | worker-css.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | worker-html.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | worker-javascript.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | worker-php.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ckeditor
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | adapters
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | build-config.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | ckeditor.custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | ckeditor.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | config.js
+                                                            li.css-icon(data-jstree='{"type":"file"}')
+                                                              | contents.css
+                                                            li(data-jstree='{"opened":false}')
+                                                              | lang
+                                                            li(data-jstree='{"opened":false}')
+                                                              | plugins
+                                                            li(data-jstree='{"opened":false}')
+                                                              | skins
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | styles.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | simple-mde
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | simplemde.custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | simplemde.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | summernote
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | summernote.custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | summernote.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | form-builder
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | form-builder-1
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | main-built.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | require.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | form-builder-2
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | beautifyhtml.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | form-builder-2.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | form-wizard
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | form-wizard.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | form-wizard-five.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | form-wizard-three.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | form-wizard-two.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery.backstretch.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | icons
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | feather-icon
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | feather.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | feather-icon.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | feather-icon-clipart.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | flag-icon-clipart.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | icon-clipart.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | icons-notify.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | whether-icon-clipart.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | image-cropper
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | cropper.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | cropper-main.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | internationalization
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | language-picker.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | jarallax_libs
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jarallax.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | libs.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | jsgrid
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | griddata.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jsgrid.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jsgrid.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | map-js
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | custom.js
+                                                        li.img-icon(data-jstree='{"type":"file"}')
+                                                          | download.png
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | mapsjs-core.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | mapsjs-mapevents.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | mapsjs-service.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | mapsjs-ui.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | notify
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | bootstrap-notify.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | index.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | notify-script.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | owlcarousel
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | owl.carousel.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | owl-custom.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | page-builder
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | ckeditor.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | config.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery.grideditor.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | lang
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | page-builder-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | skins
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | styles.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | photoswipe
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | photoswipe.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | photoswipe.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | photoswipe-ui-default.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | prism
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | prism.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | range-slider
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | ion.rangeSlider.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | rangeslider-script.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | rating
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery.barrating.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | rating-script.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | scrollable
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | perfect-scrollbar.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | scrollable-custom.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | select2
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | select2.full.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | select2-custom.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | sticky
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | sticky.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | sweet-alert
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | app.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | sweetalert.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | task
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | custom.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | theme-customizer
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | customizer.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | timeline
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | timeline-v-1
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | main.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | timeline-v-2
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.timeliny.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | timeline-v-2-custom.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | time-picker
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | clockpicker.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | highlight.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery-clockpicker.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | todo
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | todo.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | touchspin
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | input-groups.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | touchspin.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | vendors.min.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | tour
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | intro.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | intro-init.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | tree
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jstree.min.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | tree.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | typeahead
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | data
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | handlebars.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | typeahead.bundle.js
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | typeahead.custom.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | vector-map
+                                                      ul
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | jquery-jvectormap-2.0.2.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | map
+                                                        li.js-icon(data-jstree='{"type":"file"}')
+                                                          | map-vector.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | button-tooltip-custom.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | chart-widget.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | comapct-menu.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | config.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | countdown.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | ecommerce.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | email-app.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | form-validation-custom.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | fullscreen.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | general-widget.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | height-equal.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | hide-on-scroll.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | isotope.pkgd.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | jquery.drilldown.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | jquery.ui.min.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | jquery-3.5.1.min.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | landing_sticky.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | login.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | masonry-gallery.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | megamenu.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | modal-animated.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | modernizr.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | popover-custom.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | print.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | product-list-custom.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | product-tab.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | radial-chart-tooltip.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | script.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | scrollpy_landing.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | sidebar-menu.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | support-ticket-custom.js
+                                                    li.js-icon(data-jstree='{"opened":false}')
+                                                      | tooltip-init.js
+                                                li(data-jstree='{"opened":false}')
+                                                  | json
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | datatable-extension
+                                                      ul
+                                                        li.txt-icon
+                                                          | data.txt
+                                                    li.json-icon
+                                                      | airports.json
+                                                    li.json-icon
+                                                      | German.json
+                                                    li.json-icon
+                                                      | server-side.json
+                                                li(data-jstree='{"opened":false}')
+                                                  | pug
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | components
+                                                      ul
+                                                        li.pug-icon bookmark.pug
+                                                        li.pug-icon
+                                                          | document-changelog-sidebar.pug
+                                                        li.pug-icon
+                                                          | document-header.pug
+                                                        li.pug-icon
+                                                          | document-review-sidebar.pug
+                                                        li.pug-icon
+                                                          | document-sidebar.pug
+                                                        li.pug-icon footer.pug
+                                                        li.pug-icon footer-files.pug
+                                                        li.pug-icon header.pug
+                                                        li.pug-icon header-files.pug
+                                                        li.pug-icon loader.pug
+                                                        li.pug-icon sidebar.pug
+                                                        li.pug-icon
+                                                          | starter-kit-sidebar.pug
+                                                    li(data-jstree='{"opened":false}')
+                                                      | pages
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | document
+                                                          ul
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | change-log.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | index.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | review.pug
+                                                        li(data-jstree='{"opened":false}')
+                                                          | starter-kit
+                                                          ul
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | boxed.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | footer-dark.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | footer-fixed.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | footer-light.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | hide-on-scroll.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | index.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | layout-dark.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | layout-rtl.pug
+                                                        li(data-jstree='{"opened":false}')
+                                                          | theme
+                                                          ul
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | according.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | ace-code-editor.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | add-post.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | alert.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | animate.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | AOS.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | avatars.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | base-input.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | basic-card.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | basic-template.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | blog.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | blog-single.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | bookmark.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | bootstrap-basic-table.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | bootstrap-border-table.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | bootstrap-notify.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | bootstrap-sizing-table.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | bootstrap-styling-table.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | box-layout.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | box-shadow.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | breadcrumb.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | button-builder.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | button-group.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | buttons.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | buttons-edge.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | buttons-flat.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | calendar-basic.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | calendar-monthly.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | calendar-weekly.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | cart.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chart-apex.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chart-flot.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chart-google.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chartist.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chartjs.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chart-knob.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chart-morris.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chart-peity.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chart-sparkline.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chart-widget.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chat.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | chat-video.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | checkout.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | ckeditor.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | clipboard.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | comingsoon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | comingsoon-bg-img.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | comingsoon-bg-video.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | contacts.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | creative-card.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | dashboard-02.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-advance.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-AJAX.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-API.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-basic-init.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-data-source.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-autofill.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-basic-button.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-col-reorder.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-fixed-header.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-html-5-data-export.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-key-table.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-responsive.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-row-reorder.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-ext-scroller.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-plugin.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-server-side.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datatable-styling.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datepicker.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | daterangepicker.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | datetimepicker.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | default-form.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | dragable-card.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | dropdown.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | dropzone.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | ecommerce-templates.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | edit-profile.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | email-application.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | email-compose.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | email-header.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | email-order-success.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | error-400.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | error-401.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | error-403.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | error-404.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | error-500.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | error-503.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | faq.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | feather-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | flag-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | font-awesome.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | footer-dark.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | footer-fixed.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | footer-light.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | forget-password.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | form-builder-1.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | form-builder-2.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | form-validation.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | form-wizard.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | form-wizard-four.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | form-wizard-three.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | form-wizard-two.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | gallery.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | gallery-hover.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | gallery-masonry.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | gallery-with-description.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | general-widget.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | grid.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | helper-classes.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | hide-on-scroll.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | ico-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | image-cropper.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | index.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | input-group.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | internationalization.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | invoice-template.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | ionic-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | job-apply.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | job-cards-view.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | job-details.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | job-list-view.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | jsgrid-table.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | knowledgebase.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | landing-page.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | layout-dark.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | layout-light.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | layout-rtl.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | learning-detailed.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | learning-list-view.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | list.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | list-products.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | list-wish.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | loader.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | login.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | login-image.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | login-video.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | maintenance.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | map-js.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | masonry-gallery-with-disc.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | material-design-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | megaoptions.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | modal.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | modal-animated.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | order-history.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | owl-carousel.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | pagebuild.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | pagination.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | payment-details.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | pe7-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | popover.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | pricing.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | product.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | product-page.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | progress-bar.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | radio-checkbox-control.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | raised-button.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | range-slider.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | rating.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | reset-password.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | ribbons.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | sample-page.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | scrollable.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | scroll-reval.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | search.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | search-images.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | search-video.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | select2.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | signup.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | signup-image.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | signup-video.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | simple-line-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | simple-MDE.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | social-app.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | state-color.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | steps.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | sticky.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | summernote.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | support-ticket.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | sweet-alert2.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | switch.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | tabbed-card.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | tab-bootstrap.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | table-components.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | tab-material.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | tag-pills.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | task.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | template-email.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | template-email-2.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | themify-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | tilt.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | timeline-small.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | timeline-v-1.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | timeline-v-2.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | time-picker.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | to-do.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | tooltip.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | touchspin.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | tour.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | tree.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | typeahead.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | typicons-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | typography.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | unlock.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | user-cards.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | user-profile.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | vector-map.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | whether-icon.pug
+                                                            li.pug-icon(data-jstree='{"type":"file"}')
+                                                              | wow.pug
+                                                li(data-jstree='{"opened":false}')
+                                                  | scss
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | base
+                                                      ul
+                                                        li.scss-icon _reset.scss
+                                                        li.scss-icon _typography.scss
+                                                    li(data-jstree='{"opened":false}')
+                                                      | components
+                                                      ul
+                                                        li.scss-icon _according.scss
+                                                        li.scss-icon _alert.scss
+                                                        li.scss-icon _avatars.scss
+                                                        li.scss-icon _badge.scss
+                                                        li.scss-icon _bookmark.scss
+                                                        li.scss-icon _breadcrumb.scss
+                                                        li.scss-icon _builders.scss
+                                                        li.scss-icon _buttons.scss
+                                                        li.scss-icon _card.scss
+                                                        li.scss-icon _color.scss
+                                                        li.scss-icon _datatable.scss
+                                                        li.scss-icon _datepicker.scss
+                                                        li.scss-icon _dropdown.scss
+                                                        li.scss-icon _dropzone.scss
+                                                        li.scss-icon _form-builder.scss
+                                                        li.scss-icon _form-input.scss
+                                                        li.scss-icon _form-wizard.scss
+                                                        li.scss-icon _forms.scss
+                                                        li.scss-icon _form_builder-2.scss
+                                                        li.scss-icon _general.scss
+                                                        li.scss-icon _icons.scss
+                                                        li.scss-icon _list.scss
+                                                        li.scss-icon _loader.scss
+                                                        li.scss-icon _popover.scss
+                                                        li.scss-icon _print.scss
+                                                        li.scss-icon _radio.scss
+                                                        li.scss-icon _ribbon.scss
+                                                        li.scss-icon _switch.scss
+                                                        li.scss-icon _tab.scss
+                                                        li.scss-icon _table.scss
+                                                        li.scss-icon _touchspin.scss
+                                                        li.scss-icon _tour.scss
+                                                        li.scss-icon _tree.scss
+                                                        li.scss-icon _typeahead-search.scss
+                                                    li(data-jstree='{"opened":false}')
+                                                      | layout
+                                                      ul 
+                                                        li.scss-icon _box-layout.scss
+                                                        li.scss-icon _footer.scss
+                                                        li.scss-icon _grid.scss
+                                                        li.scss-icon _header.scss
+                                                        li.scss-icon _navs.scss
+                                                        li.scss-icon _rtl.scss
+                                                        li.scss-icon _search.scss
+                                                        li.scss-icon _select2.scss
+                                                        li.scss-icon _sidebar.scss
+                                                    li(data-jstree='{"opened":false}')
+                                                      | pages
+                                                      ul
+                                                        li.scss-icon _blog.scss
+                                                        li.scss-icon _bookmark-app.scss
+                                                        li.scss-icon _cart.scss
+                                                        li.scss-icon _chart.scss
+                                                        li.scss-icon _chat.scss
+                                                        li.scss-icon _checkout.scss
+                                                        li.scss-icon _comingsoon.scss
+                                                        li.scss-icon _contacts.scss
+                                                        li.scss-icon _dashboard_2.scss
+                                                        li.scss-icon _dashboard_default.scss
+                                                        li.scss-icon _ecommerce.scss
+                                                        li.scss-icon _email-application.scss
+                                                        li.scss-icon _errorpage.scss
+                                                        li.scss-icon _faq.scss
+                                                        li.scss-icon _file.scss
+                                                        li.scss-icon _gallery.scss
+                                                        li.scss-icon _internationalization.scss
+                                                        li.scss-icon _job-search.scss
+                                                        li.scss-icon _jsgrid.scss
+                                                        li.scss-icon _kanban.scss
+                                                        li.scss-icon _knowledgebase.scss
+                                                        li.scss-icon _landing.scss
+                                                        li.scss-icon _language.scss
+                                                        li.scss-icon _learning.scss
+                                                        li.scss-icon _login.scss
+                                                        li.scss-icon _megaoption.scss
+                                                        li.scss-icon _order-history.scss
+                                                        li.scss-icon _page.scss
+                                                        li.scss-icon _pricing.scss
+                                                        li.scss-icon _progress.scss
+                                                        li.scss-icon _projectlist.scss
+                                                        li.scss-icon _social-app.scss
+                                                        li.scss-icon _task.scss
+                                                        li.scss-icon _timeline-v.scss
+                                                        li.scss-icon _timeliny.scss
+                                                        li.scss-icon _user-profile.scss
+                                                        li.scss-icon _wishlist.scss
+                                                    li(data-jstree='{"opened":false}')
+                                                      | themes
+                                                      ul
+                                                        li.scss-icon _dark-sidebar.scss
+                                                        li.scss-icon _dark.scss
+                                                        li.scss-icon _document.scss
+                                                        li.scss-icon _responsive.scss
+                                                        li.scss-icon _theme-customizer.scss
+                                                    li(data-jstree='{"opened":false}')
+                                                      | utils
+                                                      ul
+                                                        li.scss-icon  _variables.scss
+                                                    li(data-jstree='{"opened":false}')
+                                                      | vendors
+                                                      ul 
+                                                        li.scss-icon
+                                                          | chartist.scss
+                                                        li.scss-icon
+                                                          | feather-icon.scss
+                                                        li.scss-icon
+                                                          | flag-icon.css
+                                                        li.scss-icon
+                                                          | icofont.scss
+                                                        li.scss-icon
+                                                          | image-cropper.scss
+                                                        li.scss-icon
+                                                          | ionic-icon.scss
+                                                        li.scss-icon
+                                                          | page-builder.scss
+                                                        li.scss-icon
+                                                          | scrollable.scss
+                                                        li.scss-icon
+                                                          | select2.scss
+                                                        li.scss-icon
+                                                          | simple-line-icon.scss
+                                                        li.scss-icon
+                                                          | simple-mde.scss
+                                                        li.scss-icon
+                                                          | sticky.scss
+                                                        li.scss-icon
+                                                          | summernote.scss
+                                                        li.scss-icon
+                                                          | svg-icon.scss
+                                                        li.scss-icon
+                                                          | sweetalert2.scss
+                                                        li.scss-icon
+                                                          | themify.scss
+                                                        li.scss-icon
+                                                          | timepicker.scss
+                                                        li.scss-icon
+                                                          | todo.scss
+                                                        li.scss-icon
+                                                          | tour.scss
+                                                        li.scss-icon
+                                                          | tree.scss
+                                                        li.scss-icon
+                                                          | typicon-icon.scss
+                                                        li.scss-icon
+                                                          | vector-map.scss
+                                                        li.scss-icon
+                                                          | whether-icon.scss
+                                                        li(data-jstree='{"opened":false}') chartist
+                                                          ul
+                                                            li.scss-icon  _chartist-settings.scss
+                                                            li.scss-icon  _chartist.scss
+                                                        li(data-jstree='{"opened":false}') feather-icon
+                                                          ul
+                                                            li.scss-icon  _feather-icon.scss
+                                                        li(data-jstree='{"opened":false}') flag-icon
+                                                          ul
+                                                            li.scss-icon _flag-icon-base.scss
+                                                            li.scss-icon  _flag-icon-list.scss
+                                                            li.scss-icon _flag-icon-more.scss
+                                                        li(data-jstree='{"opened":false}') font-awesome
+                                                          ul
+                                                            li.scss-icon _animated.scss
+                                                            li.scss-icon _bordered-pulled.scss
+                                                            li.scss-icon _core.scss
+                                                            li.scss-icon _fixed-width.scss
+                                                            li.scss-icon _icons.scss
+                                                            li.scss-icon _larger.scss
+                                                            li.scss-icon _list.scss
+                                                            li.scss-icon _mixins.scss
+                                                            li.scss-icon _path.scss
+                                                            li.scss-icon _rotated-flipped.scss
+                                                            li.scss-icon _screen-reader.scss
+                                                            li.scss-icon _stacked.scss
+                                                            li.scss-icon _variables.scss
+                                                        li(data-jstree='{"opened":false}') icoicon
+                                                          ul
+                                                            li.scss-icon  _icons.scss
+                                                        li(data-jstree='{"opened":false}') image-cropper
+                                                          ul
+                                                            li.scss-icon  _cropper-custom.scss
+                                                            li.scss-icon  _cropper-main.scss
+                                                        li(data-jstree='{"opened":false}') ionic-icon
+                                                          ul
+                                                            li.scss-icon  _ionicons-font.scss
+                                                            li.scss-icon  _ionicons-icons.scss
+                                                            li.scss-icon  _ionicons-variables.scss
+                                                        li(data-jstree='{"opened":false}') page-builder
+                                                          ul
+                                                            li.scss-icon  _page-builder.scss
+                                                        li(data-jstree='{"opened":false}') scrollable
+                                                          ul
+                                                            li.scss-icon  _scrollable.scss
+                                                        li select2
+                                                        li(data-jstree='{"opened":false}') simple-line-icon
+                                                          ul
+                                                            li.scss-icon  _simple-line-icons.scss
+                                                        li(data-jstree='{"opened":false}') simple-mde
+                                                          ul
+                                                            li.scss-icon   _elements.scss
+                                                            li.scss-icon   _simplemde.scss
+                                                        li(data-jstree='{"opened":false}') sticky
+                                                          ul
+                                                            li.scss-icon   _sticky.scss
+                                                        li(data-jstree='{"opened":false}') summernote
+                                                          ul
+                                                            li.scss-icon   _elements.scss
+                                                            li.scss-icon   _fonts.scss
+                                                            li.scss-icon   _summernote-bs4.scss
+                                                        li(data-jstree='{"opened":false}') svg-icon
+                                                          ul
+                                                            li.scss-icon   _svg-icon.scss
+                                                        li(data-jstree='{"opened":false}') sweetalert2-master
+                                                          ul
+                                                            li.scss-icon   _animations.scss
+                                                            li.scss-icon   _mixins.scss
+                                                            li.scss-icon   _toasts.scss
+                                                            li.scss-icon   _variables.scss
+                                                        li(data-jstree='{"opened":false}') themify
+                                                          ul
+                                                            li.scss-icon   _core.scss
+                                                            li.scss-icon   _extras.scss
+                                                            li.scss-icon   _icons.scss
+                                                            li.scss-icon   _mixins.scss
+                                                            li.scss-icon   _path.scss
+                                                            li.scss-icon   _themify-icons.scss
+                                                            li.scss-icon   _variables.scss
+                                                        li(data-jstree='{"opened":false}') time-picker
+                                                          ul
+                                                            li.scss-icon   _timepicker.scss
+                                                        li(data-jstree='{"opened":false}') todo
+                                                          ul
+                                                            li.scss-icon   _todo.scss
+                                                        li(data-jstree='{"opened":false}') tour
+                                                          ul
+                                                            li.scss-icon  _tour.scss
+                                                        li(data-jstree='{"opened":false}') tree
+                                                          ul
+                                                            li.scss-icon  _tree-default.scss
+                                                            li.scss-icon  _tree.scss
+                                                        li(data-jstree='{"opened":false}') typicon-icon
+                                                          ul
+                                                            li.scss-icon  _typicon-icon.scss
+                                                        li(data-jstree='{"opened":false}') vector-map
+                                                          ul
+                                                            li.scss-icon  _vector-map.scss
+                                                        li(data-jstree='{"opened":false}') whether-icon
+                                                          ul
+                                                            li.scss-icon  _whether-icon.scss
+                                                li(data-jstree='{"opened":false}')
+                                                  | video
+                                                  ul
+                                                    li.video-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                      | auth-bg.mp4                                           
+                                            li(data-jstree='{"opened":false}')
+                                              | starter-kit
+                                              ul
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | boxed.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | footer-dark.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | footer-fixed.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | footer-light.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | hide-on-scroll.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | index.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | layout-dark.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | layout-rtl.html
+                                            li(data-jstree='{"opened":false}')
+                                              | theme
+                                              ul
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | according.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | ace-code-editor.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | add-post.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | alert.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | animate.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | AOS.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | avatars.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | base-input.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | basic-card.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | basic-template.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | blog.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | blog-single.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | bookmark.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | bootstrap-basic-table.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | bootstrap-border-table.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | bootstrap-notify.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | bootstrap-sizing-table.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | bootstrap-styling-table.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | box-layout.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | box-shadow.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | breadcrumb.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | button-builder.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | button-group.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | buttons.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | buttons-edge.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | buttons-flat.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | calendar-basic.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | calendar-monthly.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | calendar-weekly.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | cart.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chart-apex.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chart-flot.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chart-google.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chartist.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chartjs.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chart-knob.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chart-morris.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chart-peity.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chart-sparkline.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chart-widget.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chat.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | chat-video.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | checkout.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | ckeditor.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | clipboard.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | comingsoon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | comingsoon-bg-img.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | comingsoon-bg-video.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | contacts.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | creative-card.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | dashboard-02.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-advance.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-AJAX.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-API.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-basic-init.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-data-source.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-autofill.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-basic-button.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-col-reorder.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-fixed-header.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-html-5-data-export.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-key-table.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-responsive.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-row-reorder.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-ext-scroller.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-plugin.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-server-side.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datatable-styling.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datepicker.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | daterangepicker.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | datetimepicker.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | default-form.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | dragable-card.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | dropdown.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | dropzone.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | ecommerce-templates.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | edit-profile.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | email-application.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | email-compose.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | email-header.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | email-order-success.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | error-400.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | error-401.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | error-403.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | error-404.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | error-500.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | error-503.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | faq.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | feather-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | flag-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | font-awesome.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | footer-dark.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | footer-fixed.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | footer-light.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | forget-password.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | form-builder-1.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | form-builder-2.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | form-validation.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | form-wizard.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | form-wizard-four.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | form-wizard-three.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | form-wizard-two.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | gallery.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | gallery-hover.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | gallery-masonry.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | gallery-with-description.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | general-widget.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | grid.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | helper-classes.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | hide-on-scroll.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | ico-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | image-cropper.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | index.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | input-group.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | internationalization.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | invoice-template.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | ionic-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | job-apply.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | job-cards-view.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | job-details.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | job-list-view.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | jsgrid-table.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | knowledgebase.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | landing-page.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | layout-dark.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | layout-light.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | layout-rtl.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | learning-detailed.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | learning-list-view.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | list.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | list-products.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | list-wish.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | loader.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | login.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | login-image.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | login-video.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | maintenance.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | map-js.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | masonry-gallery-with-disc.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | material-design-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | megaoptions.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | modal.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | modal-animated.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | order-history.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | owl-carousel.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | pagebuild.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | pagination.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | payment-details.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | pe7-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | popover.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | pricing.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | product.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | product-page.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | progress-bar.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | radio-checkbox-control.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | raised-button.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | range-slider.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | rating.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | reset-password.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | ribbons.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | sample-page.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | scrollable.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | scroll-reval.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | search.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | search-images.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | search-video.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | select2.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | signup.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | signup-image.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | signup-video.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | simple-line-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | simple-MDE.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | social-app.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | state-color.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | steps.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | sticky.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | summernote.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | support-ticket.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | sweet-alert2.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | switch.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | tabbed-card.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | tab-bootstrap.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | table-components.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | tab-material.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | tag-pills.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | task.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | template-email.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | template-email-2.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | themify-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | tilt.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | timeline-small.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | timeline-v-1.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | timeline-v-2.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | time-picker.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | to-do.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | tooltip.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | touchspin.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | tour.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | tree.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | typeahead.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | typicons-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | typography.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | unlock.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | user-cards.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | user-profile.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | vector-map.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | whether-icon.html
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | wow.html
+                                        li.gulp-icon(data-jstree='{"type":"file"}')
+                                          | gulpfile.js
+                                        li.nodejs-icon(data-jstree='{"type":"file"}')
+                                          | package.json
+                                        li.nodejs-icon(data-jstree='{"type":"file"}')
+                                          | package-lock.json
+
+                                      
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

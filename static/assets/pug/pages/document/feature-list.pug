@@ -1,0 +1,115 @@
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                          #feature-list.shortcode_text.doc-section.feature-list.mb-0
+                              .row
+                                .col-md-12
+                                  h4.main-title Templates Features
+                                  .row
+                                    .col-sm-12
+                                      ul#pills-tab.nav.nav-pills(role='tablist')
+                                        li.nav-item
+                                          a#pills-home-tab.nav-link.d-flex.active(data-bs-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') 
+                                            img(src="../assets/images/document/features/html/html.png" alt="")
+                                            .text-start
+                                              h5.mb-0 HTML
+                                              p.mb-0 Frameworks
+                                        li.nav-item
+                                          a#pills-contact-tab.d-flex.nav-link(data-bs-toggle='pill', href='#pills-contact', role='tab', aria-controls='pills-contact', aria-selected='false') 
+                                            img(src="../assets/images/document/features/laravel/laravel.png" alt="")
+                                            .text-start
+                                              h5.mb-0 Laravel
+                                              p.mb-0 Frameworks
+                                      #pills-tabContent.tab-content
+                                        #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
+                                          ul.framworks-list
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/bootstrap.png" alt="")
+                                              h6.mb-0.mt-3 Booxstrap 5X
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/css.png" alt="")
+                                              h6.mb-0.mt-3 CSS
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/sass.png" alt="")
+                                              h6.mb-0.mt-3 Sass
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/pug.png" alt="")
+                                              h6.mb-0.mt-3 Pug
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/npm.png" alt="")
+                                              h6.mb-0.mt-3 NPM
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/gulp.png" alt="")
+                                              h6.mb-0.mt-3 Gulp
+                                            li.box                                   
+                                              div 
+                                                img(src="../assets/images/document/features/html/kit.png" alt="")
+                                              h6.mb-0.mt-3 Starter Kit
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/uikits.png" alt="")
+                                              h6.mb-0.mt-3 40+ UI Kits
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/layout.png" alt="")
+                                              h6.mb-0.mt-3 8+ Layout
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/builders.png" alt="")
+                                              h6.mb-0.mt-3 Builders
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/iconset.png" alt="")
+                                              h6.mb-0.mt-3 11 Icon Sets
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/forms.png" alt="")
+                                              h6.mb-0.mt-3 Forms
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/table.png" alt="")
+                                              h6.mb-0.mt-3 Tables
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/apps.png" alt="")
+                                              h6.mb-0.mt-3 17+ Apps
+                                        #pills-contact.tab-pane.fade(role='tabpanel', aria-labelledby='pills-contact-tab')
+                                          h1.ms-4.coming-soon-txt  coming soon 
+    include ../../components/footer-files
+    
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

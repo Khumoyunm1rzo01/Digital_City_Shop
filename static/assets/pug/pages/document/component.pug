@@ -1,0 +1,1223 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var popper                = true;
+- var tooltip               = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-1
+                            .card
+                             .card-body
+                                h4.main-title.mb-0 Component
+                                hr
+                                #section1-1
+                                  h5 Basic UI Elements
+                                  ul#myTab.nav.nav-tabs(role='tablist')
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#Button' role='tab' aria-selected='false' data-original-title='' title='') Button
+                                      li.nav-item
+                                        a.nav-link.active(data-bs-toggle='tab' href='#tag-pills' role='tab' aria-selected='true' data-original-title='' title='') Tag &amp; pills
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#progress-bar' role='tab' aria-selected='false' data-original-title='' title='') progress bar
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#alert' role='tab' aria-selected='false' data-original-title='' title='') Alert
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#popovers' role='tab' aria-selected='false' data-original-title='' title='') popover
+                                  #myTabContent.tab-content
+                                      #Button.tab-pane.fade(role='tabpanel')
+                                        .fluid-container.py-4
+                                          button.btn.btn-primary.mb-2(type='button' data-original-title='' title='') Primary
+                                          button.btn.btn-secondary.mb-2(type='button' data-original-title='' title='') Secondary
+                                          button.btn.btn-success.mb-2(type='button' data-original-title='' title='') Success
+                                          button.btn.btn-info.mb-2(type='button' data-original-title='' title='') Info
+                                          button.btn.btn-warning.mb-2(type='button' data-original-title='' title='') Warning
+                                          button.btn.btn-danger.mb-2(type='button' data-original-title='' title='') Danger
+                                          button.btn.btn-light.mb-2(type='button' data-original-title='' title='') light
+                                          .code-box-copy.mt-3
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#button' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code.language-html#button
+                                                  | &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary Button&lt;/button&gt;
+                                                  | &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary Button&lt;/button&gt;
+                                                  | &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success Button&lt;/button&gt;
+                                                  | &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info Button&lt;/button&gt;
+                                                  | &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning Button&lt;/button&gt;
+                                                  | &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger Button&lt;/button&gt;
+                                                  | &lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light Button&lt;/button&gt;
+                                        p.mb-2
+                                          | To use another types button you have to link the related css
+                                          | file according to types of buttons in a head tag
+                                      #tag-pills.tab-pane.fade.active.show(role='tabpanel')
+                                        .fluid-container.py-4
+                                          span.badge.badge-primary Primary
+                                          span.badge.badge-secondary Secondary
+                                          span.badge.badge-success Success
+                                          span.badge.badge-info Info
+                                          span.badge.badge-warning.text-dark Warning
+                                          span.badge.badge-danger Danger
+                                          span.badge.badge-light.text-dark Light
+                                          span.badge.badge-dark.tag-pills-sm-mb Dark
+                                          .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#badges' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code.language-html#badges
+                                                    | &lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-secondary&quot;&gt;Secondary&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-success&quot;&gt;Success&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-info&quot;&gt;Info&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-warning text-dark&quot;&gt;Warning&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-danger&quot;&gt;Danger&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-light text-dark&quot;&gt;Light&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-dark tag-pills-sm-mb&quot;&gt;Dark&lt;/span&gt;
+                                      #progress-bar.tab-pane.fade(role='tabpanel')
+                                        .fluid-container.py-4
+                                          .progress.mb-2
+                                            .progress-bar(role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
+                                          .progress.mb-2
+                                            .progress-bar.bg-primary(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                          .progress.mb-2
+                                            .progress-bar.bg-secondary(role='progressbar' style='width: 50%' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+                                          .progress.mb-2
+                                            .progress-bar.bg-success(role='progressbar' style='width: 75%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+                                          .progress
+                                            .progress-bar.bg-info(role='progressbar' style='width: 100%' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100')
+                                          .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#progressbars' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code.language-html#progressbars
+                                                    | &lt;div class=&quot;progress mb-2&quot;&gt;
+                                                    |   &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;0&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;div class=&quot;progress mb-2&quot;&gt;
+                                                    |   &lt;div class=&quot;progress-bar bg-primary&quot; role=&quot;progressbar&quot; style=&quot;width: 25%&quot;           aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;div class=&quot;progress mb-2&quot;&gt;
+                                                    |   &lt;div class=&quot;progress-bar bg-secondary&quot; role=&quot;progressbar&quot; style=&quot;width: 50%&quot;         aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;div class=&quot;progress mb-2&quot;&gt;
+                                                    |   &lt;div class=&quot;progress-bar bg-success&quot; role=&quot;progressbar&quot; style=&quot;width: 75%&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;div class=&quot;progress mb-2&quot;&gt;
+                                                    |   &lt;div class=&quot;progress-bar bg-info&quot; role=&quot;progressbar&quot; style=&quot;width: 100%&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                                                    | &lt;/div&gt;
+                                      #alert.tab-pane.fade(role='tabpanel')
+                                        .fluid-container.py-4
+                                          .alert.alert-primary(role='alert') This is a info alert&mdash;check it out!
+                                          .alert.alert-secondary(role='alert') This is a light alert&mdash;check it out!
+                                          .alert.alert-success(role='alert') This is a success alert&mdash;check it out!
+                                          .alert.alert-info(role='alert') This is a danger alert&mdash;check it out!
+                                          .alert.alert-warning(role='alert') This is a secondary alert&mdash;check it out!
+                                          .alert.alert-danger(role='alert') This is a warning alert&mdash;check it out!
+                                          .alert.alert-light(role='alert') This is a dark alert&mdash;check it out!
+                                          .alert.alert-dark(role='alert') This is a dark alert&mdash;check it out!
+                                          .code-box-copy.mt-4
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#alertcopy' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#alertcopy.language-html
+                                                  | &lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;This is a info alert&mdash;check it out!&lt;/div&gt;
+                                                  | &lt;div class=&quot;alert alert-secondary&quot; role=&quot;alert&quot;&gt;This is a light alert&mdash;check it out!&lt;/div&gt;
+                                                  | &lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;This is a success alert&mdash;check it out!&lt;/div&gt;
+                                                  | &lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;This is a danger alert&mdash;check it out!&lt;/div&gt;
+                                                  | &lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;This is a secondary alert&mdash;check it out!&lt;/div&gt;
+                                                  | &lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;This is a warning alert&mdash;check it out!&lt;/div&gt;
+                                                  | &lt;div class=&quot;alert alert-light&quot; role=&quot;alert&quot;&gt;This is a dark alert&mdash;check it out!&lt;/div&gt;
+                                                  | &lt;div class=&quot;alert alert-dark&quot; role=&quot;alert&quot;&gt;This is a dark alert&mdash;check it out!&lt;/div&gt;
+                                      #popovers.tab-pane.fade(role='tabpanel')
+                                        .fluid-container.py-4
+                                          button.btn.btn-primary.example-popover.me-1.mb-2(type='button' data-bs-toggle='popover' title='' data-bs-content="And here's some amazing content. It's very engaging. Right?" data-original-title='Popover title') Click to toggle popover
+                                          a.example-popover.btn.btn-secondary.mb-2(tabindex='0' role='button' data-bs-toggle='popover' data-bs-trigger='focus' title='' data-bs-content="And here's some amazing content. It's very engaging. Right?" data-original-title='Popover title')
+                                            | Dismissible
+                                            | popover
+                                          button.example-popover.btn.btn-success.mb-2(type='button' data-bs-trigger='hover' data-container='body' data-bs-toggle='popover' data-bs-placement='bottom' title='' data-offset='-20px -20px' data-bs-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.' data-original-title='Popover title') On Hover Tooltip
+                                          .code-box-copy.mt-3
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#popovercode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#popovercode.language-html
+                                                    | &lt;button type=&quot;button&quot; class=&quot;btn btn-primary example-popover mr-1&quot; data-bs-toggle=&quot;popover&quot; title=&quot;Popover title&quot; data-bs-content=&quot;And here&apos;s some amazing content. It&apos;s very engaging. Right?&quot;&gt;Click to toggle popover&lt;/button&gt;
+                                                    | &lt;a tabindex=&quot;0&quot; class=&quot;example-popover btn btn-secondary&quot; role=&quot;button&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;focus&quot; title=&quot;Popover title&quot; data-bs-content=&quot;And here&apos;s some amazing content. It&apos;s very engaging. Right?&quot;&gt;Dismissible                                              popover&lt;/a&gt;
+                                                    | &lt;button type=&quot;button&quot; data-bs-trigger=&quot;hover&quot; class=&quot;example-popover btn btn-success&quot; data-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;bottom&quot; title=&quot;Popover title&quot; data-offset=&quot;-20px -20px&quot; data-bs-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; &gt;On Hover Tooltip&lt;/button&gt;
+                                          h6.pt-3.pb-2 To use java script you have to add the following script tag
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#popoverjs' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#popoverjs.language-html
+                                                    | &lt;!--popover js--&gt;
+                                                    | &lt;script src=&quot;../assets/js/popover-custom.js&quot;&gt;&lt;/script&gt;
+                                  ul#myTab2.nav.nav-tabs.m-t-25(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#tooltips' role='tab' aria-selected='false' data-original-title='' title='') Tooltip
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#dropdown' role='tab' aria-selected='true' data-original-title='' title='') Dropdown
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#tabs' role='tab' aria-selected='false' data-original-title='' title='') Tabs
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#according' role='tab' aria-selected='false' data-original-title='' title='') According
+                                  #myTabContent2.tab-content
+                                    #tooltips.tab-pane.fade.show.active(role='tabpanel')
+                                      .fluid-container.py-4
+                                        button.example-popover.btn.btn-primary(type='button' data-container='body' data-bs-toggle='tooltip' data-bs-placement='top' title='tooltip' data-original-title='Popover title') Hover Me
+                                        .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tooltipcode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#tooltipcode.language-html
+                                                    | &lt;button type=&quot;button&quot; class=&quot;example-popover btn btn-primary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Popover title&quot; &gt;Hover Me&lt;/button&gt;
+                                        h6.pt-3.pb-2 To use java script you have to add the following script tag
+                                        .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tooltipjs' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#tooltipjs.language-html
+                                                    | &lt;!--tooltip js--&gt;
+                                                    | &lt;script src=&quot;../assets/js/tooltip-init.js&quot;&gt;&lt;/script&gt;
+                                    #dropdown.tab-pane.fade(role='tabpanel')
+                                      .fluid-container.py-4
+                                        .dropdown-basic
+                                          .dropdown
+                                            button.dropbtn.btn-primary(type='button' data-original-title='' title='')
+                                              | Dropdown
+                                              | Button
+                                              span
+                                                i.icofont.icofont-arrow-down
+                                            .dropdown-content
+                                              a(href='#' data-original-title='' title='') Action
+                                              a(href='#' data-original-title='' title='') Another Action
+                                              a(href='#' data-original-title='' title='') Something Else Here
+                                        .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dropdowncode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#dropdowncode.language-html
+                                                    | &lt;div class=&quot;dropdown-basic&quot;&gt;
+                                                    |   &lt;div class=&quot;dropdown&quot;&gt;
+                                                    |     &lt;button type=&quot;button&quot; class=&quot;dropbtn btn-primary&quot;&gt;Dropdown Button &lt;span&gt;&lt;i class=&quot;icofont icofont-arrow-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+                                                    |     &lt;div class=&quot;dropdown-content&quot;&gt;
+                                                    |       &lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;
+                                                    |       &lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;
+                                                    |       &lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;
+                                                    |     &lt;/div&gt;
+                                                    |   &lt;/div&gt;
+                                                    | &lt;/div&gt;
+                                    #tabs.tab-pane.fade(role='tabpanel')
+                                      .fluid-container.py-4
+                                        ul#myTab3.nav.nav-tabs(role='tablist')
+                                          li.nav-item
+                                            a#home-tab.nav-link.active(data-bs-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true' data-original-title='' title='') Home                                      
+                                          li.nav-item.dropdown
+                                            a.nav-link.dropdown-toggle(data-bs-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false' data-original-title='' title='') Dropdown
+                                            .dropdown-menu
+                                              a#profile-tab.dropdown-item(data-bs-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false' data-original-title='' title='') Action
+                                              a.dropdown-item(href='#' data-original-title='' title='') Another action
+                                              a.dropdown-item(href='#' data-original-title='' title='') Something else here
+                                              .dropdown-divider
+                                              a.dropdown-item(href='#' data-original-title='' title='') Separated link
+                                          li.nav-item
+                                            a#profile-tabs.nav-link(data-bs-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false' data-original-title='' title='') Profile
+                                          li.nav-item
+                                            a#contact-tab.nav-link(data-bs-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false' data-original-title='' title='') Contact
+                                        #myTabContent3.tab-content
+                                          #home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
+                                            p.mb-0.mt-3
+                                              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                          #profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
+                                            p.mb-0.mt-3
+                                              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                          #contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
+                                            p.mb-0.mt-3
+                                              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                        .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tabcode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#tabcode.language-html
+                                                    | &lt;ul class=&quot;nav nav-tabs&quot; id=&quot;myTab3&quot; role=&quot;tablist&quot;&gt;
+                                                    | &lt;li class=&quot;nav-item&quot;&gt;
+                                                    | &lt;a class=&quot;nav-link active&quot; id=&quot;home-tab&quot;         data-bs-toggle=&quot;tab&quot; href=&quot;#home&quot; role=&quot;tab&quot; aria-controls=&quot;home&quot; aria-selected=&quot;true&quot;&gt;Home&lt;/a&gt;
+                                                    | &lt;/li&gt;
+                                                    | &lt;li class=&quot;nav-item dropdown&quot;&gt;
+                                                    | &lt;a class=&quot;nav-link dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; href=&quot;#&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown&lt;/a&gt;
+                                                    | &lt;div class=&quot;dropdown-menu&quot;&gt;
+                                                    | &lt;a class=&quot;dropdown-item&quot; id=&quot;profile-tab&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#profile&quot; role=&quot;tab&quot; aria-controls=&quot;profile&quot; aria-selected=&quot;false&quot;&gt;Action&lt;/a&gt;
+                                                    | &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;
+                                                    | &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                                                    | &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+                                                    | &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;/li&gt;
+                                                    | &lt;li class=&quot;nav-item&quot;&gt;
+                                                    | &lt;a class=&quot;nav-link&quot; id=&quot;profile-tabs&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#profile&quot; role=&quot;tab&quot; aria-controls=&quot;profile&quot; aria-selected=&quot;false&quot;&gt;Profile&lt;/a&gt;
+                                                    | &lt;/li&gt;
+                                                    | &lt;li class=&quot;nav-item&quot;&gt;
+                                                    | &lt;a class=&quot;nav-link&quot; id=&quot;contact-tab&quot;           data-bs-toggle=&quot;tab&quot; href=&quot;#contact&quot; role=&quot;tab&quot; aria-controls=&quot;contact&quot; aria-selected=&quot;false&quot;&gt;Contact&lt;/a&gt;
+                                                    | &lt;/li&gt;
+                                                    | &lt;/ul&gt;
+                                                    | &lt;div class=&quot;tab-content&quot; id=&quot;myTabContent3&quot;&gt;
+                                                    | &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;home&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;home-tab&quot;&gt;
+                                                    | &lt;p class=&quot;mb-0 m-t-30&quot;&gt;
+                                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                                    | &lt;/p&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;div class=&quot;tab-pane fade&quot; id=&quot;profile&quot;        role=&quot;tabpanel&quot; aria-labelledby=&quot;profile-tab&quot;&gt;
+                                                    | &lt;p class=&quot;mb-0 m-t-30&quot;&gt;
+                                                    | ...
+                                                    | &lt;/p&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;div class=&quot;tab-pane fade&quot; id=&quot;contact&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;contact-tab&quot;&gt;
+                                                    | &lt;p class=&quot;mb-0 m-t-30&quot;&gt;
+                                                    | ...
+                                                    | &lt;/p&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;/div&gt;
+                                    #according.tab-pane.fade(role='tabpanel')
+                                      .fluid-container.py-4
+                                        #accordion.default-according
+                                          .card
+                                            #headingOne.card-header
+                                              h6.mb-0
+                                                button.btn.btn-link(data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne' data-original-title='' title='')
+                                                  | Collapsible Group Item #
+                                                  span.digits 1
+                                            #collapseOne.collapse.show(aria-labelledby='headingOne' data-bs-parent='#accordion')
+                                              .card-body
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                          .card
+                                            #headingTwo.card-header
+                                              h6.mb-0
+                                                button.btn.btn-link.collapsed(data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo' data-original-title='' title='')
+                                                  | Collapsible Group Item #
+                                                  span.digits 2
+                                            #collapseTwo.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordion')
+                                              .card-body
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                          .card
+                                            #headingThree.card-header
+                                              h6.mb-0
+                                                button.btn.btn-link.collapsed(data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree' data-original-title='' title='')
+                                                  | Collapsible Group Item #
+                                                  span.digits 3
+                                            #collapseThree.collapse(aria-labelledby='headingThree' data-bs-parent='#accordion')
+                                              .card-body
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                        .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#accodioncode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#accodioncode.language-html
+                                                    | &lt;div id=&quot;accordion&quot; class=&quot;default-according&quot;&gt;
+                                                    | &lt;div class=&quot;card&quot;&gt;
+                                                    | &lt;div class=&quot;card-header&quot; id=&quot;headingOne&quot;&gt;
+                                                    | &lt;h5 class=&quot;mb-0&quot;&gt;
+                                                    | &lt;button class=&quot;btn btn-link&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseOne&quot; aria-expanded=&quot;true&quot;      aria-controls=&quot;collapseOne&quot;&gt;
+                                                    | Collapsible Group Item #
+                                                    |                               &lt;span class=&quot;digits&quot;&gt;1&lt;/span&gt;
+                                                    | &lt;/button&gt;
+                                                    | &lt;/h5&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;div id=&quot;collapseOne&quot; class=&quot;collapse show&quot; aria-labelledby=&quot;headingOne&quot; data-bs-parent=&quot;#accordion&quot;&gt;
+                                                    | &lt;div class=&quot;card-body&quot;&gt;
+                                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                                    | &lt;/div&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;/div&gt;
+                                                    | &lt;div class=&quot;card&quot;&gt;
+                                                    | ...
+                                                    | &lt;/div&gt;
+                                                    | &lt;div class=&quot;card&quot;&gt;
+                                                    | ...
+                                                    | &lt;/div&gt;
+                                                    | &lt;/div&gt;
+                             #section-1-2
+                                .card-body
+                                  hr.hr
+                                  h5 Advance UI Elements
+                                  ul#myTab4.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#scrollable' role='tab' aria-selected='true' data-original-title='' title='') Scrollable
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#tree' role='tab' aria-selected='false' data-original-title='' title='') Tree
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#notify' role='tab' aria-selected='false' data-original-title='' title='') Notify
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#rating' role='tab' aria-selected='false' data-original-title='' title='') rating
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#dropzone' role='tab' aria-selected='false' data-original-title='' title='') dropzone
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#tour' role='tab' aria-selected='true' data-original-title='' title='') Tour
+                                  #myTabContent4.tab-content
+                                    #scrollable.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#scrollablecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#scrollablecode.language-html
+                                                | &lt;!--Scrollable css--&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/scrollable.css&quot;&gt;
+                                                | &lt;!--scrollable js--&gt;
+                                                | &lt;script src=&quot;../assets/js/scrollable/scrollable-custom.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/scrollable/perfect-scrollbar.min.js&quot; &gt;&lt;/script&gt;
+                                    #tree.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-3
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#treecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#treecode.language-html
+                                                | &lt;!-- Tree css --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/tree.css&quot;&gt;
+                                                | &lt;!-- Tree js--&gt;
+                                                | &lt;script src=&quot;../assets/js/tree/jstree.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/tree/tree.js&quot; &gt;&lt;/script&gt;
+                                    #notify.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-3
+                                        | To use java script you have to add the following
+                                        | script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#notifycode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#notifycode.language-html
+                                                | &lt;!-- bootstrap notify js --&gt;
+                                                | &lt;script src=&quot;../assets/js/notify/bootstrap-notify.min.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/notify/notify-script.js&quot; &gt;&lt;/script&gt;
+                                    #rating.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-3
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#rangeslidecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#rangeslidecode.language-html
+                                                | &lt;!-- range slider css start here --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/rating.css&quot;&gt;
+                                                | &lt;!-- Ion Range Slider js --&gt;
+                                                | &lt;script src=&quot;../assets/js/rating/jquery.barrating.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/rating/rating-script.js&quot; &gt;&lt;/script&gt;
+                                    #dropzone.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-3
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dropzonecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#dropzonecode.language-html
+                                                | &lt;!-- Dropzone start here --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/dropzone.css&quot;&gt;
+                                                | &lt;!-- Dropzone js --&gt;
+                                                | &lt;script src=&quot;../assets/js/dropzone/dropzone.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/dropzone/dropzone-script.js&quot; &gt;&lt;/script&gt;
+                                    #tour.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-3
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tourcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#tourcode.language-html
+                                                | &lt;!-- tour js --&gt;
+                                                | &lt;script src=&quot;../assets/js/tour/intro.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/tour/intro-init.js&quot; &gt;&lt;/script&gt;
+                                  ul#myTab5.nav.nav-tabs.m-t-35(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#sweet-alert' role='tab' aria-selected='false' data-original-title='' title='') sweet alert
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#demo-animated' role='tab' aria-selected='false' data-original-title='' title='') Animated modal
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#owl-carousel' role='tab' aria-selected='false' data-original-title='' title='') owl carousel
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#range-slider' role='tab' aria-selected='false' data-original-title='' title='') Range slider
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#image-cropper' role='tab' aria-selected='false' data-original-title='' title='') Image cropper
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#sticky' role='tab' aria-selected='false' data-original-title='' title='') Sticky
+                                  #myTabContent5.tab-content
+                                    #sweet-alert.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#sweetalertcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#sweetalertcode.language-html
+                                                | &lt;!-- Sweet alert jquery--&gt;
+                                                | &lt;script src=&quot;../assets/js/sweet-alert/sweetalert.min.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/sweet-alert/app.js&quot; &gt;&lt;/script&gt;
+                                    #demo-animated.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2
+                                        | To use java script you have to add the following css
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#modalanimatecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#modalanimatecode.language-html
+                                                | &lt;!-- animate css --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/animate.css&quot;&gt;
+                                                | &lt;!-- Modal js--&gt;
+                                                | &lt;script src=&quot;../assets/js/modal-animated.js&quot;&gt;&lt;/script&gt;
+                                    #owl-carousel.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#owlcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#owlcode.language-html
+                                                | &lt;!-- Owl css --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/owlcarousel.css&quot;&gt;
+                                                | &lt;!-- owlcarousel js--&gt;
+                                                | &lt;script src=&quot;../assets/js/owlcarousel/owl.carousel.js&quot; &gt;&lt;/script&gt;
+                                    #range-slider.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#rangeslidercode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#rangeslidercode.language-html
+                                                | &lt;!-- range slider css start here --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/range-slider.css&quot;&gt;
+                                                | &lt;!-- Ion Range Slider js --&gt;
+                                                | &lt;script src=&quot;../assets/js/range-slider/ion.rangeSlider.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/range-slider/rangeslider-script.js&quot; &gt;&lt;/script&gt;
+                                    #image-cropper.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#imagecroppercode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#imagecroppercode.language-html
+                                                | &lt;!--Image cropper css--&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/image-cropper.css&quot;&gt;
+                                                | &lt;!--Cropper jquery--&gt;
+                                                | &lt;script src=&quot;../assets/js/image-cropper/cropper.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/image-cropper/cropper-main.js&quot;&gt;&lt;/script&gt;
+                                    #sticky.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                         .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#stickycode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#stickycode.language-html
+                                                | &lt;!-- sticky css --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/sticky.css&quot;&gt;
+                                                | &lt;!--Sticky note js--&gt;
+                                                | &lt;script src=&apos;../assets/js/sticky/sticky.js&apos;&gt;&lt;/script&gt;
+                             #section-1-3
+                               .card-body
+                                  hr
+                                  h5 Animations
+                                  ul#myTab6.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#animate' role='tab' aria-selected='true' data-original-title='' title='') Animate
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#scroll-reveal' role='tab' aria-selected='false' data-original-title='' title='') scroll reveal
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#aos' role='tab' aria-selected='false' data-original-title='' title='') AOS
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#tilt' role='tab' aria-selected='false' data-original-title='' title='') Tilt
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#wow' role='tab' aria-selected='true' data-original-title='' title='') Wow
+                                  #myTabContent6.tab-content
+                                    #animate.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2
+                                        | To use java script you have to add the following style
+                                        | and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#animatecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#animatecode.language-html
+                                                | &lt;!-- animate custom js --&gt;
+                                                | &lt;script src=&quot;../assets/js/animation/animate-custom.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;!-- Animate icon --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/css/animate.css&quot;&gt;
+                                    #scroll-reveal.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#scrollrevealcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#scrollrevealcode.language-html
+                                                | &lt;!-- Scroll Reveal jquery--&gt;
+                                                | &lt;script src=&quot;../assets/js/animation/scroll-reveal/scrollreveal.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/modernizr.js&quot; &gt;&lt;/script&gt;
+                                    #aos.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#aoscode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#aoscode.language-html
+                                                | &lt;!-- AOS icon --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/aos.css&quot;&gt;
+                                                | &lt;!-- AOS js--&gt;
+                                                | &lt;script src=&apos;../assets/js/isotope.pkgd.js&apos;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/animation/aos/aos.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/animation/aos/aos-init.js&quot; &gt;&lt;/script&gt;
+                                    #tilt.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tiltcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#tiltcode.language-html
+                                                | &lt;!-- Tilt js--&gt;
+                                                | &lt;script src=&quot;../assets/js/animation/tilt/tilt.jquery.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/animation/tilt/tilt-custom.js&quot;&gt;&lt;/script&gt;
+                                    #wow.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#wowcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#wowcode.language-html
+                                                | &lt;!-- WOW js--&gt;
+                                                | &lt;script src=&quot;../assets/js/wow/wow.min.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/wow/wow-init.js&quot; &gt;&lt;/script&gt;
+                             #section-1-4
+                               .card-body
+                                  hr
+                                  h5 Icons
+                                  p.m-t-25
+                                    | To use another types button you have to link the related css file
+                                    | according to types of buttons in a head tag
+                             #section-1-5
+                                .card-body
+                                    hr.hr
+                                    h5.my-4 Forms
+                                    ul#myTab7.nav.nav-tabs(role='tablist')
+                                      li.nav-item
+                                        a.nav-link.active(data-bs-toggle='tab' href='#form-validation' role='tab' aria-selected='true' data-original-title='' title='') form-validation
+                                    #myTabContent7.tab-content
+                                      #form-validation.tab-pane.fade.show.active(role='tabpanel')
+                                        h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                        .mb-4
+                                          .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#formvalidationcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#formvalidationcode.language-html
+                                                | &lt;script src=&quot;../assets/js/form-validation-custom.js&quot; &gt;&lt;/script&gt;
+                             #section-1-6
+                               .card-body
+                                hr
+                                h5 Tables
+                                ul#myTab8.nav.nav-tabs(role='tablist')
+                                  li.nav-item
+                                    a.nav-link.active(data-bs-toggle='tab' href='#bootstrap-tables' role='tab' aria-selected='true' data-original-title='' title='') Bootstrap tables
+                                  li.nav-item
+                                    a.nav-link(data-bs-toggle='tab' href='#data-tables' role='tab' aria-selected='true' data-original-title='' title='') Data tables
+                                  li.nav-item
+                                    a.nav-link(data-bs-toggle='tab' href='#extension-data-tables' role='tab' aria-selected='true' data-original-title='' title='')
+                                      | extension data
+                                      | tables
+                                #myTabContent8.tab-content
+                                  #bootstrap-tables.tab-pane.fade.show.active(role='tabpanel')
+                                    .fluid-container.py-4
+                                      .table-responsive
+                                        table.table
+                                          thead
+                                            tr
+                                              th(scope='col') #
+                                              th(scope='col') First Name
+                                              th(scope='col') Last Name
+                                              th(scope='col') Username
+                                              th(scope='col') Role
+                                              th(scope='col') Country
+                                          tbody
+                                            tr
+                                              th(scope='row') 1
+                                              td Alexander
+                                              td Orton
+                                              td @mdorton
+                                              td Admin
+                                              td USA
+                                            tr
+                                              th(scope='row') 2
+                                              td John Deo
+                                              td Deo
+                                              td @johndeo
+                                              td User
+                                              td USA
+                                            tr
+                                              th(scope='row') 3
+                                              td Randy Orton
+                                              td the Bird
+                                              td @twitter
+                                              td admin
+                                              td UK
+                                            tr
+                                              th(scope='row') 4
+                                              td Randy Mark
+                                              td Ottandy
+                                              td @mdothe
+                                              td user
+                                              td AUS
+                                            tr
+                                              th(scope='row') 5
+                                              td Ram Jacob
+                                              td Thornton
+                                              td @twitter
+                                              td admin
+                                              td IND
+                                      .mt-3.mb-4
+                                        .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tablecode' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#tablecode.language-html
+                                                  | &lt;div class=&quot;table-responsive&quot;&gt;
+                                                  | &lt;table class=&quot;table&quot;&gt;
+                                                  | &lt;thead&gt;
+                                                  | &lt;tr&gt;
+                                                  | &lt;th scope=&quot;col&quot;&gt;#&lt;/th&gt;
+                                                  | &lt;th scope=&quot;col&quot;&gt;First Name&lt;/th&gt;
+                                                  | &lt;th scope=&quot;col&quot;&gt;Last Name&lt;/th&gt;
+                                                  | &lt;th scope=&quot;col&quot;&gt;Username&lt;/th&gt;
+                                                  | &lt;th scope=&quot;col&quot;&gt;Role&lt;/th&gt;
+                                                  | &lt;th scope=&quot;col&quot;&gt;Country&lt;/th&gt;
+                                                  | &lt;/tr&gt;
+                                                  | &lt;/thead&gt;
+                                                  | &lt;tbody&gt;
+                                                  | &lt;tr&gt;
+                                                  | &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+                                                  | &lt;td&gt;Alexander&lt;/td&gt;
+                                                  | &lt;td&gt;Orton&lt;/td&gt;
+                                                  | &lt;td&gt;@mdorton&lt;/td&gt;
+                                                  | &lt;td&gt;Admin&lt;/td&gt;
+                                                  | &lt;td&gt;USA&lt;/td&gt;
+                                                  | &lt;/tr&gt;
+                                                  | &lt;tr&gt;
+                                                  | &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                                                  | &lt;td&gt;John Deo&lt;/td&gt;
+                                                  | &lt;td&gt;Deo&lt;/td&gt;
+                                                  | &lt;td&gt;@johndeo&lt;/td&gt;
+                                                  | &lt;td&gt;User&lt;/td&gt;
+                                                  | &lt;td&gt;USA&lt;/td&gt;
+                                                  | &lt;/tr&gt;
+                                                  | &lt;tr&gt;
+                                                  | &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+                                                  | &lt;td&gt;Randy Orton&lt;/td&gt;
+                                                  | &lt;td&gt;the Bird&lt;/td&gt;
+                                                  | &lt;td&gt;@twitter&lt;/td&gt;
+                                                  | &lt;td&gt;admin&lt;/td&gt;
+                                                  | &lt;td&gt;UK&lt;/td&gt;
+                                                  | &lt;/tr&gt;
+                                                  | &lt;tr&gt;
+                                                  | &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
+                                                  | &lt;td&gt;Randy Mark&lt;/td&gt;
+                                                  | &lt;td&gt;Ottandy&lt;/td&gt;
+                                                  | &lt;td&gt;@mdothe&lt;/td&gt;
+                                                  | &lt;td&gt;user&lt;/td&gt;
+                                                  | &lt;td&gt;AUS&lt;/td&gt;
+                                                  | &lt;/tr&gt;
+                                                  | &lt;tr&gt;
+                                                  | &lt;th scope=&quot;row&quot;&gt;5&lt;/th&gt;
+                                                  | &lt;td&gt;Ram Jacob&lt;/td&gt;
+                                                  | &lt;td&gt;Thornton&lt;/td&gt;
+                                                  | &lt;td&gt;@twitter&lt;/td&gt;
+                                                  | &lt;td&gt;admin&lt;/td&gt;
+                                                  | &lt;td&gt;IND&lt;/td&gt;
+                                                  | &lt;/tr&gt;
+                                                  | &lt;/tbody&gt;
+                                                  | &lt;/table&gt;
+                                                  | &lt;/div&gt;
+                                  #data-tables.tab-pane.fade(role='tabpanel')
+                                    h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                    .mb-4
+                                      .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#datatablecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#datatablecode.language-html
+
+                                                | &lt;script src=&quot;../assets/js/datatable/datatables/jquery.dataTables.min.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatables/datatable.custom.js&quot; &gt;&lt;/script&gt;
+                                  #extension-data-tables.tab-pane.fade(role='tabpanel')
+                                    h6.pt-4.pb-2 To use java script you have to add the following style and script tag
+                                    .mb-4
+                                      .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#jsgridcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#jsgridcode.language-html
+                                                | &lt;!--JSGrid css--&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/datatables.css&quot; /&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/datatable-extension.css&quot;&gt;
+                                                | &lt;!--Datatable extension js--&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatables/jquery.dataTables.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/dataTables.buttons.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/jszip.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/pdfmake.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/vfs_fonts.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/dataTables.autoFill.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/dataTables.select.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/buttons.print.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/buttons.html5.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/dataTables.bootstrap4.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/dataTables.responsive.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/responsive.bootstrap4.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/dataTables.keyTable.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/datatable/datatable-extension/custom.js&quot;&gt;&lt;/script&gt;
+                             #section-1-7
+                               .card-body
+                                  hr
+                                  h5 Cards
+                                  ul#myTab9.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#basic-card' role='tab' aria-selected='true' data-original-title='' title='') Basic cards
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#draggable-cards' role='tab' aria-selected='true' data-original-title='' title='') Draggable Cards
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#theme-cards' role='tab' aria-selected='true' data-original-title='' title='') Theme Cards
+                                  #myTabContent9.tab-content
+                                    #basic-card.tab-pane.fade.show.active(role='tabpanel')
+                                      .fluid-container.py-4
+                                        .card
+                                          .card-header
+                                            h6.mb-0 Basic Card
+                                          .card-body
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
+                                        .mb-4
+                                          .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#cardcode' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#cardcode.language-html
+                                                  | &lt;div class=&quot;card&quot;&gt;
+                                                  |  &lt;div class=&quot;card-header&quot;&gt;
+                                                  |  &lt;h5&gt;Basic Card&lt;/h5&gt;
+                                                  |  &lt;/div&gt;
+                                                  |  &lt;div class=&quot;card-body&quot;&gt;
+                                                  |  &lt;p class=&quot;mb-0&quot;&gt; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. &lt;/p&gt;
+                                                  | &lt;/div&gt;
+                                                  | &lt;/div&gt;
+                                    #draggable-cards.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dragcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#dragcode.language-html
+                                                | &lt;!--Sortable JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/jquery.ui.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/dragable/sortable.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/dragable/sortable-custom.js&quot;&gt;&lt;/script&gt;
+                                    #theme-cards.tab-pane.fade.show(role='tabpanel')
+                                      .fluid-container.py-4
+                                        .card
+                                          .card-header.b-l-primary
+                                            h6.mb-0 Creative Card
+                                          .card-body
+                                            p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry  
+                                        .mb-4
+                                          .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#creativecode' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#creativecode.language-html
+                                                  | &lt;div class=&quot;card b-l-primary&quot;&gt;
+                                                  |  &lt;div class=&quot;card-header&quot;&gt;
+                                                  |  &lt;h5&gt;primary-gradient&lt;/h5&gt;
+                                                  |  &lt;/div&gt;
+                                                  |  &lt;div class=&quot;card-body&quot;&gt;
+                                                  |  &lt;p class=&quot;mb-0&quot;&gt; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. &lt;/p&gt;
+                                                  | &lt;/div&gt;
+                                                  | &lt;/div&gt;
+                             #section-1-8
+                               .card-body
+                                  hr
+                                  h5 Timeline
+                                  ul#myTab10.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#timeline1' role='tab' aria-selected='true' data-original-title='' title='') Timeline1
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#timeline2' role='tab' aria-selected='true' data-original-title='' title='') Timeline2
+                                  #myTabContent10.tab-content
+                                    #timeline1.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#timelinecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#timelinecode.language-html
+                                                | &lt;!-- Timeline js--&gt;
+                                                | &lt;script src=&quot;../assets/js/timeline/timeline-v-1/main.js&quot; &gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/modernizr.js&quot; &gt;&lt;/script&gt;
+                                    #timeline2.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#timelinecode2' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#timelinecode2.language-html
+                                                | &lt;!-- Timeline js--&gt;
+                                                | &lt;script src=&quot;../assets/js/timeline/timeline-v-2/jquery.timeliny.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/timeline-v-2/timeline-v-2-custom.js&quot; &gt;&lt;/script&gt;
+                             #section-1-9
+                                .card-body
+                                  hr
+                                  h5 Charts
+                                  ul#myTab11.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#chart-google' role='tab' aria-selected='true' data-original-title='' title='') Google Charts
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#chart-sparkline' role='tab' aria-selected='true' data-original-title='' title='') sparkline charts
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#chart-flot' role='tab' aria-selected='true' data-original-title='' title='')
+                                        | Flot charts
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#chart-peity' role='tab' aria-selected='true' data-original-title='' title='') Peity Charts
+                                  #myTabContent11.tab-content
+                                    #chart-google.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#googlecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#googlecode.language-html
+                                                | &lt;!-- google Chart JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/google/google-chart-loader.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/google/google-chart.js&quot;&gt;&lt;/script&gt;
+                                    #chart-sparkline.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#sparklinecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#sparklinecode.language-html
+                                                | &lt;!--Sparkline Chart JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/sparkline/sparkline.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/sparkline/sparkline-script.js&quot;&gt;&lt;/script&gt;
+                                    #chart-flot.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#flotcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#flotcode.language-html
+                                                | &lt;!-- flot Chart JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/excanvas.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/jquery.flot.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/jquery.flot.time.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/jquery.flot.symbol.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/jquery.flot.categories.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/jquery.flot.stack.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/flot-script.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/jquery.flot.pie.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/flot-chart/jquery.flot.symbol.js&quot;&gt;&lt;/script&gt;
+                                    #chart-peity.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#peitycode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#peitycode.language-html
+                                                | &lt;!--Sparkline Chart JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/peity-chart/peity.jquery.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/peity-chart/peity-custom.js&quot;&gt;&lt;/script&gt;
+                                  ul#myTab12.nav.nav-tabs.m-t-45(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#chart-morris' role='tab' aria-selected='true' data-original-title='' title='') morris Charts
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#chart-chatjs' role='tab' aria-selected='true' data-original-title='' title='') Chatjs charts
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#chart-chartlist' role='tab' aria-selected='true' data-original-title='' title='') Chartist charts
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#chart-knob' role='tab' aria-selected='true' data-original-title='' title='') Knob charts
+                                  #myTabContent12.tab-content
+                                    #chart-morris.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#morriscode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#morriscode.language-html
+                                                | &lt;!-- Morris Chart JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/morris-chart/raphael.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/morris-chart/morris.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/morris-chart/prettify.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/morris-chart/morris-script.js&quot;&gt;&lt;/script&gt;
+                                    #chart-chatjs.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#chartjscode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#chartjscode.language-html
+                                                | &lt;!-- Chart JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/chartjs/chart.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/chartjs/chart.custom.js&quot;&gt;&lt;/script&gt;
+                                    #chart-chartlist.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use css and java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#chartist' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#chartist.language-html
+                                                | &lt;!-- Chartist --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/chartist.css&quot;&gt;
+                                                | &lt;!-- Chartist --&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/chartist/chartist.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/chartist/chartist-custom.js&quot;&gt;&lt;/script&gt;
+                                    #chart-knob.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#knobcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#knobcode.language-html
+                                                | &lt;!--Knob Chart JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/knob/knob.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/knob/knob-chart.js&quot;&gt;&lt;/script&gt;
+                                  ul#myTab15.nav.nav-tabs.m-t-45(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#chart-apex' role='tab' aria-selected='true' data-original-title='' title='') Apex Charts
+                                  #myTabContent15.tab-content
+                                    #chart-apex.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#apexcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#apexcode.language-html
+                                                | &lt;!-- Apex Chart JS--&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/apex-chart/apex-chart.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/apex-chart/stock-prices.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/chart/apex-chart/chart-custom.js&quot;&gt;&lt;/script&gt;
+                             #section-1-10
+                               .card-body
+                                  hr
+                                  h5 Maps
+                                  ul#myTab13.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#g-map' role='tab' aria-selected='true' data-original-title='' title='') Map Js
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#vector-map' role='tab' aria-selected='true' data-original-title='' title='') Vector map
+                                  #myTabContent13.tab-content
+                                    #g-map.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#mapcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#mapcode.language-html
+                                                | &lt;!--Map css--&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/mapsjs-ui.css&quot;&gt;
+                                                | &lt;!-- Map js--&gt;
+                                                | &lt;script src=&quot;../assets/js/map-js/mapsjs-core.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/map-js/mapsjs-service.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/map-js/mapsjs-ui.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/map-js/mapsjs-mapevents.js&quot;&gt;&lt;/script&gt;
+                                    #vector-map.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use css and java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#vectorcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#vectorcode.language-html
+                                                | &lt;!--Vector Map css--&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/vector-map.css&quot;&gt;
+                                                | &lt;!--vector map js--&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/jquery-jvectormap-2.0.2.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/map/jquery-jvectormap-world-mill-en.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/map/jquery-jvectormap-us-aea-en.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/map/jquery-jvectormap-uk-mill-en.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/map/jquery-jvectormap-au-mill.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/map/jquery-jvectormap-chicago-mill-en.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/map/jquery-jvectormap-in-mill.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/map/jquery-jvectormap-asia-mill.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/vector-map/map-vector.js&quot;&gt;&lt;/script&gt;
+                             #section-1-11
+                                .card-body
+                                  hr
+                                  h5 Editors
+                                  ul#myTab14.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#summer-note' role='tab' aria-selected='true' data-original-title='' title='') Summer note
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#ckeditor' role='tab' aria-selected='true' data-original-title='' title='') Ckeditor
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#simple-mde' role='tab' aria-selected='true' data-original-title='' title='') Simple Mde
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#ace-code' role='tab' aria-selected='true' data-original-title='' title='') Ace Code
+                                  #myTabContent14.tab-content
+                                    #summer-note.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use css and java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#summercode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#summercode.language-html
+                                                | &lt;!-- Summernote css --&gt;
+                                                | &lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/css/summernote.css&quot;&gt;
+                                                | &lt;!--Summer-note js--&gt;
+                                                | &lt;script src=&quot;../assets/js/editor/summernote/summernote.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/editor/summernote/summernote.custom.js&quot;&gt;&lt;/script&gt;
+                                    #ckeditor.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#ckcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#ckcode.language-html
+                                                | &lt;!--ckeditor js--&gt;
+                                                | &lt;script src=&quot;../assets/js/editor/ckeditor/ckeditor.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/editor/ckeditor/styles.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/editor/ckeditor/adapters/jquery.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/editor/ckeditor/ckeditor.custom.js&quot;&gt;&lt;/script&gt;
+                                    #simple-mde.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use css and java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#mdecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#mdecode.language-html
+                                                | &lt;!-- Simple-MDE css --&gt;
+                                                | &lt;link rel=&quot;stylesheet prefetch&quot; href=&quot;../assets/css/simple-mde.css&quot;&gt;
+                                                | &lt;!-- Simple MDE editor jquery--&gt;
+                                                | &lt;script src=&quot;../assets/js/simple-mde/simplemde.min.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/simple-mde/simplemde.custom.js&quot;&gt;&lt;/script&gt;
+                                    #ace-code.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use css and java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#acecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#acecode.language-html
+                                                | &lt;!--ace code editor js--&gt;
+                                                | &lt;script src=&quot;../assets/js/ace-editor/ace.js&quot;&gt;&lt;/script&gt;
+                                                | &lt;script src=&quot;../assets/js/ace-editor/ace-custom.js&quot;&gt;&lt;/script&gt;
+                        .col-xxl-2.col-xl-3.right-column
+                           #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-1' data-original-title='' title='')
+                                    h5.mb-0 Components
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-1' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Basic
+                                        |  UI Elements
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-2' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Advance
+                                        |                                                     UI Elements
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-3' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 Animations
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-4' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 Icons
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-5' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Forms
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-6' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Tables
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-7' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 Cards
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-8' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 Timeline
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-9' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 Charts
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-10' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 maps
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-11' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 Editors
+                        
+                              
+
+
+
+
+    include ../../components/footer-files

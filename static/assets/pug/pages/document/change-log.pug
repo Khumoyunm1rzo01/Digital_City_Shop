@@ -1,0 +1,60 @@
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.col-md-12.content
+                                .row
+                                  .col-md-12.change-log-main
+                                    h4.main-title Change Log
+                                    //p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                                    .change-log-inner-sec
+                                      .row.change-log-content
+                                        .col-lg-3.change-log-date
+                                          .change-date
+                                            h6 1/9/2021
+                                            p Version 1.0.0
+                                        .col-lg-2
+                                          .log-version-info
+                                            .log-version
+                                            .log-line
+                                        .col-lg-7
+                                          .right-log-content
+                                            p
+                                              span.log-update Initial
+                                              | Theme Initial with  Html version 
+                                            .log-download-links
+                                              a.log-btn(href='change_log.txt' download)
+                                                i.fa.fa-cloud-download
+                                                | Download
+                                      .row.change-log-content
+                                        .col-lg-3.change-log-date
+                                          .change-date
+                                            h6 7/9/2021                                             
+                                            p Version 1.2.0
+                                        .col-lg-2
+                                          .log-version-info
+                                            .log-version
+                                            .log-line
+                                        .col-lg-7
+                                          .right-log-content
+                                            p
+                                              span.log-update Updated
+                                              | knowledgebase pages added
+                                            .log-download-links
+                                              a.log-btn(href='change_log.txt' download)
+                                                i.fa.fa-cloud-download
+                                                | Download
+    include ../../components/footer-files

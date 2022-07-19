@@ -1,0 +1,65 @@
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.col-md-12.content
+                            article#accordian
+                                .row
+                                  .col-md-12
+                                    h4.main-title.mb-4                                       
+                                      | Layout Setting   
+                                  .col-md-12                 
+                                    .card
+                                       .card-header.text-center
+                                          h5 Change layout just adding class
+
+                                       .col-md-6.offset-md-3
+                                          div.text-center.m-5 
+                                             img.img-fluid.img-thumbnail.mb-2(src='../assets/images/code.jpg' alt='')
+                                             br
+                                             span.note Note: Add class along with page-wrapper
+                                  .col-md-4
+                                    .card
+                                       .card-header
+                                          h6 Compact layout
+                                       .m-3
+                                          | page-wrapper 
+                                          b compact-wrapper
+                                  .col-md-4
+                                    .card
+                                       .card-header
+                                          h6 Enterprise Layout 
+                                       .m-3
+                                          | page-wrapper 
+                                          b compact-sidebar
+                                  .col-md-4
+                                    .card
+                                       .card-header
+                                          h6 Modern Layout
+                                       .m-3
+                                          | page-wrapper 
+                                          b modern-sidebar
+    include ../../components/footer-files                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

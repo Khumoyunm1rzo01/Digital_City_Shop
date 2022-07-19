@@ -1,0 +1,292 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-5
+                            .card
+                              .card-body
+                                h4.main-title Apps
+                                hr
+                                #section51
+                                  h5.mt-4 Users
+                                  ul#myTab15.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#users-profile' role='tab' aria-selected='true' data-original-title='' title='') Users profile
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#users-card' role='tab' aria-selected='false' data-original-title='' title='') Users card
+                                  #myTabContent15.tab-content
+                                    #users-profile.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4
+                                        | You don&apos;t need to add any additional css or js.
+                                        | The css and js which describe in a html page is default. Use the code of
+                                        | it to use it
+                                    #users-card.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4
+                                        | You don&apos;t need to add any additional css or js.
+                                        | The css and js which describe in a html page is default. Use the code of
+                                        | it to use it
+                              #section52
+                                .card-body.p-t-0
+                                  hr
+                                  h5.mt-0 Calender
+                                  ul#myTab16.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#full-calender-basic' role='tab' aria-selected='true' data-original-title='' title='') Calender
+                                  #myTabContent16.tab-content
+                                    #full-calender-basic.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following style and script tag
+                                      .mb-4
+                                        .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#calendercode' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#calendercode.language-html
+                                                  | &lt;!-- calendar css --&gt;
+                                                  | &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/calendar.css&quot;&gt;
+                                                  | &lt;!--Calendar js--&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/tui-code-snippet.min.js&quot;&gt;&lt;/script&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/tui-time-picker.min.js&quot;&gt;&lt;/script&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/tui-date-picker.min.js&quot;&gt;&lt;/script&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/moment.min.js&quot;&gt;&lt;/script&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/chance.min.js&quot;&gt;&lt;/script&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/tui-calendar.js&quot;&gt;&lt;/script&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/calendars.js&quot;&gt;&lt;/script&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/schedules.js&quot;&gt;&lt;/script&gt;
+                                                  | &lt;script src=&quot;../assets/js/calendar/app.js&quot;&gt;&lt;/script&gt;
+                              #section53
+                                .card-body
+                                  hr
+                                  h5 Gallery
+                                  ul#myTab17.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#gallery-desk' role='tab' aria-selected='false' data-original-title='' title='') Gallery with desc
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#Massonry' role='tab' aria-selected='false' data-original-title='' title='') Masonry gallery
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#Masonry-desk' role='tab' aria-selected='false' data-original-title='' title='') Masonry gallery desc
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#hover-effects' role='tab' aria-selected='true' data-original-title='' title='') Hover Effects
+                                  #myTabContent17.tab-content
+                                    #gallery-desk.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 for this you have to add the same css and js which are used for grid gallery
+                                    #Massonry.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the grid gallery js also following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#masonrycode' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#masonrycode.language-html
+                                                  | &lt;!--Masonry gallery js--&gt;
+                                                  | &lt;script src=&quot;../assets/js/masonry-gallery.js&quot;&gt;&lt;/script&gt;
+                                    #Masonry-desk.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 for this you have to add the same css and js which are used for masonry gallery
+                                    #hover-effects.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 You don&apos;t need to add any additional css or js for the gallery hover page
+                              #section54
+                                .card-body
+                                  hr
+                                  h5 Email
+                                  ul#myTab18.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#email-app' role='tab' aria-selected='true' data-original-title='' title='') Email App
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#email-compose' role='tab' aria-selected='false' data-original-title='' title='') Email Compose
+                                  #myTabContent18.tab-content
+                                    #email-app.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                      .mb-4
+                                        .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#emailcode' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#emailcode.language-html
+                                                  | &lt;!--Email js--&gt;
+                                                  | &lt;script src=&quot;../assets/js/email-app.js&quot;&gt;&lt;/script&gt;
+                                    #email-compose.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 for this you have to add the same js which are used for Email application
+                              #section55
+                                .card-body
+                                  hr
+                                  h5 Blog
+                                  h6.pb-2 You don&apos;t need to add any extra css or js to add the blog code
+                              #section56
+                                .card-body
+                                  hr
+                                  h5 Chat
+                                  ul#myTab19.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#chat-app' role='tab' aria-selected='true' data-original-title='' title='') Chat App
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#video-chat' role='tab' aria-selected='false' data-original-title='' title='') Video Chat
+                                  #myTabContent19.tab-content
+                                    #chat-app.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 To use java script you have to add the following script tag
+                                    #video-chat.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 for this you don&apos;t need to add any additional css or js
+                              #section57
+                                .card-body
+                                  hr
+                                  h5 Support ticket
+                                  h6.pb-2 To use java script you have to add the following script tag
+                                  .mb-4
+                                    .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#supportcode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#supportcode.language-html
+                                                    | &lt;script src=&quot;../assets/js/support-ticket-custom.js&quot; &gt;&lt;/script&gt;
+                              #section58
+                                .card-body
+                                  hr
+                                  h5 TODO
+                                  h6.pb-2 To use java script you have to add the following script tag
+                                  .mb-4
+                                    .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#todocode' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#todocode.language-html
+                                                  | &lt;!-- To-do js --&gt;
+                                                  | &lt;script src=&quot;../assets/js/todo/todo.js&quot;&gt;&lt;/script&gt;
+                              #section59
+                                .card-body
+                                  hr
+                                  h5 Landing page
+                                  h6.pb-2 You don&apos;t need to add any additional css or js for the landing page
+                              #section510
+                                .card-body.p-t-0
+                                  hr
+                                  h5.mt-0 Ecommerce
+                                  ul#myTab20.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#product' role='tab' aria-selected='true' data-original-title='' title='') Product
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#product-page' role='tab' aria-selected='false' data-original-title='' title='') Product page
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#payment-product' role='tab' aria-selected='false' data-original-title='' title='') Product List
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#payment-details' role='tab' aria-selected='false' data-original-title='' title='') Payment Details
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#ordre-history' role='tab' aria-selected='false' data-original-title='' title='') Order History  
+                                  #myTabContent20.tab-content
+                                    #product.tab-pane.fade.show.active(role='tabpanel')
+                                      h6.pt-4.pb-2 There is no need to add any additional css or js
+                                    #product-page.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 There is no need to add any additional css or js
+                                    #payment-product.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 There is no need to add any additional css or js
+                                    #payment-details.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 There is no need to add any additional css or js
+                                    #order-history.tab-pane.fade(role='tabpanel')
+                                      h6.pt-4.pb-2 There is no need to add any additional css or js 
+                              #section511
+                                .card-body.p-t-0
+                                  hr
+                                  h5.mt-0 Pricing
+                                  h6.pb-2 There is no need to add any additional css or js
+                        .col-xxl-2.col-xl-3.right-column
+                          #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item.p-0
+                                  a.nav-link.quick-links.active(href='#section-5' data-original-title='' title='')
+                                    h5.mb-0 Apps
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section51' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Users
+                                    li.nav-item
+                                      a.nav-link(href='#section52' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Calenders
+                                    li.nav-item
+                                      a.nav-link(href='#section53' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Galllery
+                                    li.nav-item
+                                      a.nav-link(href='#section54' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Email
+                                    li.nav-item
+                                      a.nav-link(href='#section55' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Blog
+                                    li.nav-item
+                                      a.nav-link(href='#section56' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Chat
+                                    li.nav-item
+                                      a.nav-link(href='#section57' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Support Ticket
+                                    li.nav-item
+                                      a.nav-link(href='#section58' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | To-Do
+                                    li.nav-item
+                                      a.nav-link(href='#section59' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Landing Page
+                                    li.nav-item
+                                      a.nav-link(href='#section510' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Ecommerce
+                                    li.nav-item
+                                      a.nav-link(href='#section511' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Pricing
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+                              
+
+
+
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

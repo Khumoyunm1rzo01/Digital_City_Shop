@@ -1,0 +1,92 @@
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.col-md-12.content
+                            article#accordian
+                                .row
+                                  .col-md-12
+                                    h4.main-title 
+                                      i.me-2(data-feather='help-circle')
+                                      | Accordian
+                                    p 
+                                      | Last updated Jan 29, 2021
+                                  .col-md-12
+                                    .toggle-code
+                                      h5#toggle.s_title.load-order-2
+                                        | Toggle
+                                        a.anchorjs-link(aria-label='Anchor' data-anchorjs-icon='' href='#toggle' style='font: 1em / 1 anchorjs-icons; padding-left: 0.375em;')
+                                      a.toggle_btn(data-bs-toggle='collapse' href='#multiCollapseExample1' role='button' aria-expanded='false' aria-controls='multiCollapseExample1') Super Professional
+                                      #multiCollapseExample1.collapse.multi-collapse.show
+                                        .card.card-body.toggle_body
+                                          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                      a.toggle_btn.mt-1.collapsed(data-bs-toggle='collapse' href='#multiCollapseExample2' role='button' aria-expanded='false' aria-controls='multiCollapseExample2') Dashboard
+                                      #multiCollapseExample2.collapse.multi-collapse
+                                        .card.card-body.toggle_body
+                                          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    .accordion_shortcode
+                                      h5#accordions.s_title.load-order-2
+                                        | Accordion
+                                        a.anchorjs-link(aria-label='Anchor' data-anchorjs-icon='' href='#accordions' style='font: 1em / 1 anchorjs-icons; padding-left: 0.375em;')
+                                      #accordion
+                                        .card.doc_accordion
+                                          #headingOne.card-header
+                                            h5.mb-0
+                                              button.btn.btn-link.collapsed(data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                                                | Super Professional
+                                                i.fa.fa-plus
+                                                i.fa.fa-minus
+                                          #collapseOne.collapse(aria-labelledby='headingOne' data-bs-parent='#accordion' style='')
+                                            .card-body.toggle_body
+                                              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                        .card.doc_accordion
+                                          #headingTwo.card-header
+                                            h5.mb-0
+                                              button.btn.btn-link.collapsed(data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+                                                | Online Marketing
+                                                i.fa.fa-plus
+                                                i.fa.fa-minus
+                                          #collapseTwo.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordion' style='')
+                                            .card-body.toggle_body
+                                              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                        .card.doc_accordion
+                                          #headingThree.card-header
+                                            h5.mb-0
+                                              button.btn.btn-link.collapsed(data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+                                                | Amazing Support 
+                                                i.fa.fa-plus
+                                                i.fa.fa-minus
+                                          #collapseThree.collapse(aria-labelledby='headingThree' data-bs-parent='#accordion')
+                                            .card-body.toggle_body
+                                              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

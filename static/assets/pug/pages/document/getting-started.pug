@@ -1,0 +1,91 @@
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                          .row
+                            .col-sm-12
+                              h4.main-title Getting Started
+                            .col-sm-12
+                                .card.getting-started-sec
+                                  .card-body.p-0
+                                    .alert-box.alert.alert-primary.mb-0
+                                            p.mt-0 Viho Admin is a responsive HTML template that is based on the CSS framework Bootstrap 5 and it is built with Sass, Gulp and Pug. Sass compiler makes it easier to code and customize. If you are unfamiliar with Bootstrap or Gulp, visit their website and read through the documentation. All of Bootstrap components have been modified to fit the style of Viho Admin and provide a consistent look throughout the template.
+                                            hr
+                                            p Before you start working with the template, we suggest you go through the pages that are bundled with the theme. Most of the template example pages contain quick tips on how to create or use a component which can be really helpful when you need to create something on the fly.
+                                .card.gulp-section
+                                  .card-header
+                                    h4.mb-0 Gulp Tasks
+                                  .card-body.p-t-0
+                                    p
+                                      | First, you must download and install node.js. NPM stands for node packaged modules and is a way to manage development dependencies through Node.js.
+                                    p Download the Node.js source code or a pre-built installer for your platform, and start developing, you can download it from <a href="#">anodejs.org.</a>
+                                    p You can check it in your terminal window using these commands node --version and npm --version.
+                                    p <a href="#">GulpJS </a>is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.
+                                          ul
+                                            li Navigate to the root main/directory,default
+                                            li Then use $ npm i command (install node js)
+                                            li $ gulp command (for run project)
+                                    p NPM use the package.json file and automatically install the required local dependencies listed in it.
+                                    p dependencies are
+                                      strong : gulp, browser-sync, gulp-autoprefixer, gulp-livereload, gulp-pug, gulp-sass, livereload
+                                    We have added all necessary gulp task in gulpfile.js, for more details about plugin refer this link 
+                                      a(href="https://gulpjs.com/plugins/") https://gulpjs.com/plugins/
+                                .card.new-arrival-sec
+                                  .card-header
+                                    h4.mb-0 What's Next?
+                                  .card-body.p-t-0
+                                    .arrival-content-main
+                                      a(href="tree.html")
+                                        .arrival-content
+                                              i.fa.fa-angle-double-right
+                                              h5 Tree
+                                      
+                                    .arrival-content-main
+                                      a(href="options.html")
+                                        .arrival-content
+                                              i.fa.fa-angle-double-right
+                                              h5 Options
+                                      
+                                    .arrival-content-main
+                                      a(href="component.html")
+                                        .arrival-content
+                                              i.fa.fa-angle-double-right
+                                              h5 Components
+
+                                    .arrival-content-main
+                                      a(href="app.html")
+                                        .arrival-content
+                                              i.fa.fa-angle-double-right
+                                              h5 Applications
+                                      
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       
