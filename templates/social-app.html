@@ -181,7 +181,7 @@
                   </li>
                   <li class="sidebar-main-title">
                     <div>
-                      <h6>General             </h6>
+                      <h6>General</h6>
                     </div>
                   </li>
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>
@@ -375,7 +375,7 @@
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="users"></i><span>Users</span></a>
                     <ul class="nav-submenu menu-content">
                       <li><a href="user-profile.html">Users Profile</a></li>
-                      <li><a href="edit-profile.html">Users Edit</a></li>
+                      <li><a href="{% url 'edit-profile' %}">Users Edit</a></li>
                       <li><a href="user-cards.html">Users Cards</a></li>
                     </ul>
                   </li>
@@ -572,7 +572,7 @@
                     <div class="profile-img-wrrap"><img class="img-fluid bg-img-cover" src="{% static 'assets/images/user-profile/bg-profile.jpg' %}" alt=""></div>
                     <div class="userpro-box">
                       <div class="img-wrraper">                              
-                        <div class="avatar"><img class="img-fluid" alt="" src="{% static 'assets/images/user/7.jpg' %}"></div><a class="icon-wrapper" href="edit-profile.html"><i class="icofont icofont-pencil-alt-5">                              </i></a>
+                        <div class="avatar"><img class="img-fluid" alt="" src="{% static 'assets/images/user/7.jpg' %}"></div><a class="icon-wrapper" href="{% url 'edit-profile' %}"><i class="icofont icofont-pencil-alt-5">                              </i></a>
                       </div>
                       <div class="user-designation">
                         <div class="title"><a target="_blank" href=""> 

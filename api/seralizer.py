@@ -5,14 +5,13 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
-
+        
 
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = '__all__'
-
 
 class ColorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -65,6 +64,7 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'
+        depth = 1
 
 
 
@@ -141,6 +141,7 @@ class CartSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cart
         fields = "__all__"
+        depth = 1
 
 class CartDetailSerializer(serializers.ModelSerializer):
     class Meta:
@@ -158,3 +159,4 @@ class WishlistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wishlist
         fields = "__all__" 
+        depth = 1

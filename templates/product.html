@@ -8,7 +8,7 @@
                 <div class="col-sm-6">
                   <h3>Product</h3>
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'default' %}">Home</a></li>
                     <li class="breadcrumb-item">ECommerce</li>
                     <li class="breadcrumb-item active">Product</li>
                   </ol>
@@ -294,62 +294,56 @@
                           <div class="ribbon ribbon-success ribbon-right">50%</div><img class="img-fluid" src="{% static 'assets/images/ecommerce/04.jpg' %}" alt="">
                           <div class="product-hover">
                             <ul>
-                              <li><a href="cart.html"><i class="icon-shopping-cart"></i></a></li>
+                              <li><a href="{% url 'cart' %}"><i class="icon-shopping-cart"></i></a></li>
                               <li><a data-bs-toggle="modal" data-bs-target="#exampleModalCenter3"><i class="icon-eye"></i></a></li>
                             </ul>
                           </div>
                         </div>
+                      {% for i in product %}
                         <div class="modal fade" id="exampleModalCenter3">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <div class="product-box row">
-                                  <div class="product-img col-lg-6"><img class="img-fluid" src="{% static 'assets/images/ecommerce/04.jpg' %}" alt=""></div>
+                                  <div class="product-img col-lg-6"><img class="img-fluid" src="{{ i.img_1.url }}" alt=""></div>
                                   <div class="product-details col-lg-6 text-start"><a href="product-page.html">
-                                      <h4>Roadster</h4></a>
-                                    <div class="product-price">$38.00
-                                      <del>$45.00    </del>
+                                      <h4>{{ i.name }}</h4></a>
+                                    <div class="product-price">
+                                      <h3>{{ i.price }}</h3>
                                     </div>
                                     <div class="product-view">
-                                      <h6 class="f-w-600">Product Details</h6>
-                                      <p class="mb-0">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo.</p>
+                                      <p class="mb-0">{{ i.text }}</p>
                                     </div>
                                     <div class="product-size">
                                       <ul>
                                         <li> 
-                                          <button class="btn btn-outline-light" type="button">M</button>
-                                        </li>
-                                        <li> 
-                                          <button class="btn btn-outline-light" type="button">L</button>
-                                        </li>
-                                        <li> 
-                                          <button class="btn btn-outline-light" type="button">Xl</button>
+                                          <button style="width:200px;" class="btn btn-outline-light" type="button">{{ i.dimensions }}</button>
                                         </li>
                                       </ul>
                                     </div>
                                     <div class="product-qnty">
-                                      <h6 class="f-w-600">Quantity</h6>
+                                      <h6 class="f-w-600">{{ i.quantity }}</h6>
                                       <fieldset>
                                         <div class="input-group">
                                           <input class="touchspin text-center" type="text" value="5">
                                         </div>
                                       </fieldset>
-                                      <div class="addcart-btn"><a class="btn btn-primary me-3" href="cart.html">Add to Cart</a><a class="btn btn-primary" href="product-page.html">View Details</a></div>
+                                      <div class="addcart-btn"><a class="btn btn-primary me-3" href="{% url 'cart' %}">Add to Cart</a><a class="btn btn-primary" href="{% url 'product-page' %}">View Details</a></div>
                                     </div>
                                   </div>
                                 </div>
-                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"> </button>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="product-details"><a href="product-page.html">
-                            <h4>Roadster</h4></a>
-                          <p>Women Solid Denim Jacket</p>
-                          <div class="product-price">$38.00
-                            <del>$45.00 </del>
+                            <h4>{{ i.name }}</h4></a>
+                          <p>{{ i.text }}</p>
+                          <div class="product-price">
+                            <h3>{{ i.price }}</h3>
                           </div>
                         </div>
+                      {% endfor %}
                       </div>
                     </div>
                   </div>
@@ -360,7 +354,7 @@
                           <div class="ribbon ribbon-danger">Sale</div><img class="img-fluid" src="{% static 'assets/images/ecommerce/02.jpg' %}" alt="">
                           <div class="product-hover">
                             <ul>
-                              <li><a href="cart.html"><i class="icon-shopping-cart"></i></a></li>
+                              <li><a href="{% url 'cart' %}"><i class="icon-shopping-cart"></i></a></li>
                               <li><a data-bs-toggle="modal" data-bs-target="#exampleModalCenter6"><i class="icon-eye"></i></a></li>
                             </ul>
                           </div>
@@ -400,7 +394,7 @@
                                           <input class="touchspin text-center" type="text" value="5">
                                         </div>
                                       </fieldset>
-                                      <div class="addcart-btn"><a class="btn btn-primary me-3" href="cart.html">Add to Cart</a><a class="btn btn-primary" href="product-page.html">View Details</a></div>
+                                      <div class="addcart-btn"><a class="btn btn-primary me-3" href="{% url 'cart' %}">Add to Cart</a><a class="btn btn-primary" href="product-page.html">View Details</a></div>
                                     </div>
                                   </div>
                                 </div>

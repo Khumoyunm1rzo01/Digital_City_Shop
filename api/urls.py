@@ -9,11 +9,12 @@ from .views import *
 
 
 urlpatterns = [
-    path('user/register/', User_Register),
+    path('post-user_register/', User_Register),
     path('get-slider/', Get_Slider),
+    path('get-review/', Getreview),
     path('product/filter/sale/', On_Sale),
     path('product/filter/price/', Product_price),
-    path('join/news/', Join_Newsletter),
+    path('join/news', Join_Newsletter),
     path('product_id/<int:pk>', product_id),
     path('get-product/', Getproduct),
     path('get-info/', Info_View.as_view()),
@@ -32,11 +33,14 @@ urlpatterns = [
     path('get-shippingdetail/', Getshippingsdetail),
     path('get-cart/', Cart_View.as_view()),
     path('get-cartdetail/', Getcartdetail),
-    path('get-billingdetails/', Getbillingdetail),
-    path('rating/new/<int:pk>/', Create_Rating),
+    path('get-billingdetails/', Getbillingdetails),
+    path('rating/new/<int:pk>/', Edit_Rating),
     path('post-card/', Add_Cart),
+    path('get-category/', Getcategory),
+    path('get-color/', Getcolor),
     path('post-wishlist/', Add_Wishlist),
+    path('blog/search/', Search_Blog),
+    path('count-rating/<int:pk>/', Count_Rating)
     # path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
-

@@ -41,41 +41,33 @@ class Product(models.Model):
     name = models.CharField(max_length=255)
     price = models.FloatField()
     rating = models.IntegerField(default=0)
+    quantity = models.IntegerField()
     text = models.TextField()
     img_1 = models.ImageField(upload_to='images/product/')
     img_2 = models.ImageField(upload_to='images/product/', null=True, blank=True)
     img_3 = models.ImageField(upload_to='images/product/', null=True, blank=True)
     img_4 = models.ImageField(upload_to='images/product/', null=True, blank=True)
+    img_5 = models.ImageField(upload_to='images/product/', null=True, blank=True)
     sku = models.IntegerField()
     category = models.ManyToManyField(Category)
     on_sale = models.BooleanField(default=False)
-    sale_percent = models.IntegerField(default=0)
+    sale_percent = models.CharField(max_length=255)
     gmail = models.EmailField()
     fb = models.URLField()
     insta = models.URLField()
     tw = models.URLField()
-    weight = models.FloatField()
+    weight = models.CharField(max_length=255)
     dimensions = models.CharField(max_length=255)
     colors = models.ManyToManyField(Color)
     material = models.CharField(max_length=255)
 
-
-class Rating(models.Model):
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
-    rating = models.IntegerField()
-    product = models.ForeignKey(Product, on_delete=models.PROTECT, related_name='product1')
+    def __str__(self):
+        return self.name
 
 class Review(models.Model):
     review = models.CharField(max_length=255)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    rating = models.IntegerField()
-    star = models.IntegerField(choices=(
-        (1, '1'), 
-        (2, '2'), 
-        (3, '3'), 
-        (4, '4'), 
-        (5, '5'),
-    ), default=0)
+    rating = models.IntegerField(default=0)
     date = models.DateField(auto_now=True)
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
 
@@ -95,7 +87,7 @@ class Subject(models.Model):
 
 
 class Contact(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     message = models.TextField()
 
@@ -104,6 +96,7 @@ class Blog(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     date = models.DateField()
     img = models.ImageField(upload_to='images/blog')
+    name = models.CharField(max_length=255)
     text = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
 
@@ -120,6 +113,7 @@ class Comment(models.Model):
 class Reply(models.Model):
     reply_to = models.ForeignKey(Comment, on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
+    email = models.EmailField()
     website = models.URLField(blank=True, null=True)
     comment = models.CharField(max_length=255)
 
@@ -195,6 +189,7 @@ class CartDetail(models.Model):
 
 class BillingDetails(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
+    country = models.CharField(max_length=255)
     postcode = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
 
@@ -202,3 +197,5 @@ class BillingDetails(models.Model):
 class Wishlist(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    
+    

@@ -1,3 +1,4 @@
+from math import prod
 from django.shortcuts import render
 from django.shortcuts import redirect
 from rest_framework.response import Response 
@@ -33,7 +34,7 @@ def User_Register(request):
 
 @api_view(['GET'])
 def Get_Slider(request):
-    slider = Product.objects.filter().order_by('-rating')[:5]
+    slider = Product.objects.filter(rating=5)
     ser = ProductSerializer(slider, many=True)
     return Response(ser.data)
 
@@ -62,7 +63,6 @@ def Join_Newsletter(request):
     user = request.user
     if user.news == False:
         user.news = True
-    
     return Response(status=status.HTTP_200_OK)
 
 
@@ -70,7 +70,7 @@ def Join_Newsletter(request):
 
 @api_view(['GET'])
 def product_id(request,pk):
-    a = Product.objects.get(id = pk)
+    a = Product.objects.get(id=pk)
     ser = ProductSerializer(a)
     return Response(ser.data)
 
@@ -96,6 +96,7 @@ def Getblog(request):
     a = Blog.objects.all()
     ser = BlogSerializer(a, many=True)
     return Response(ser.data)
+
 
 @permission_classes([IsAuthenticated])
 @authentication_classes([TokenAuthentication])
@@ -130,7 +131,8 @@ def Postreply(request):
     user = request.user
     website = request.POST.get('website')
     comment = request.POST.get('comment')
-    d = Reply.objects.create(reply_to=reply, user=user, website=website, comment=comment)
+    email = request.POST.get('email')
+    d = Reply.objects.create(reply_to=reply, user=user, website=website, comment=comment, email=email)
     ser = ReplySerializer(d)
     return Response(ser.data)
 
@@ -189,6 +191,18 @@ def Getshippingsdetail(request):
     ser = Shipping_Detail_Serializer(g, many=True)
     return Response(ser.data)
 
+@api_view(['GET'])
+def Getcategory(request):
+    g = Category.objects.all()
+    ser = CategorySerializer(g, many=True)
+    return Response(ser.data)
+
+@api_view(['GET'])
+def Getcolor(request):
+    g = Color.objects.all()
+    ser = ColorSerializer(g, many=True)
+    return Response(ser.data)
+
 class Cart_View(ListAPIView):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
@@ -201,7 +215,7 @@ def Getcartdetail(request):
 
 
 @api_view(['GET'])
-def Getbillingdetail(request):
+def Getbillingdetails(request):
     j = BillingDetails.objects.all()
     ser = Billing_Detail_Serializer(j, many=True)
     return Response(ser.data)
@@ -210,19 +224,27 @@ def Getbillingdetail(request):
 @permission_classes([IsAuthenticated])
 @authentication_classes([TokenAuthentication])
 @api_view(['POST'])
-def Create_Rating(request, pk):
-    user = request.user
+def Edit_Rating(request, pk):
     product = Product.objects.get(id=pk)
-    rating = request.GET('rating')
-
-    rating = Rating.objects.create(user=user, product=product, rating=rating)
+    rating = request.POST.get('rating')
+    product.rating = rating
+    product.save()
+    return Response({'status': "Muvaffaqiyatli o'zgartirildi!"})
+    
 
 
 @api_view(['GET'])
 def Count_Rating(request, pk):
-    product = Product.objects.get(id=pk)
-
-
+    product = Review.objects.filter(product__id=pk)
+    soni = len(product)
+    stars = []
+    for i in product:
+        stars.append(i.rating)
+    norma = sum(stars)/soni
+    return Response({"soni":soni,"norma":norma})
+            
+    
+    
 
 
 
@@ -234,7 +256,8 @@ def Add_Cart(request):
     product = Product.objects.get(id=product)
     user = request.user
     total = request.POST.get('total')
-    a = Cart.objects.create(product=product, user=user, total=total)
+    a = Cart.objects.create(user=user, total=total)
+    a.product.add(product)
     ser = CartSerializer(a)
     return Response(ser.data)
 
@@ -244,13 +267,23 @@ def Add_Cart(request):
 @permission_classes([IsAuthenticated])
 @authentication_classes([TokenAuthentication])
 @api_view(['POST'])
-def Add_Wishlist (self, request):
+def Add_Wishlist(request):
     user = request.user
     ads = request.POST.get('id') 
     a = Product.objects.get(id=ads)
-    a = Wishlist.objects.create(user=user, ads=a)
-    ser = WishlistSerializer(a)
+    username = request.POST.get('username') 
+    user1 = User.objects.get(username=username)
+    b = Wishlist.objects.create(user=user1, product=a)
+    ser = WishlistSerializer(b)
     return Response (ser.data)
+
+
+@api_view(['GET'])
+def Search_Blog(request):
+    q = request.GET['text']
+    result = Blog.objects.filter(text__icontains=q)
+    ser = BlogSerializer(result, many=True)
+    return Response(ser.data)
 
 #########################################################
 
@@ -306,9 +339,8 @@ def Avatars(request):
     return render(request, 'avatars.html', context)
 
 def Mahsulot(request):
-    product = Product.objects.all()
     context = {
-        'product': product,
+        'product': Product.objects.all(),
     }
     return render(request, 'product.html', context)
 
@@ -416,12 +448,6 @@ def Blog_01(request):
 
 def Blog_Single(request):
     context = {
-        
+        'blog': Blog.objects.all()
     }
     return render(request, 'blog-single.html', context)
-
-def Add_post(request):
-    context = {
-        
-    }
-    return render(request, 'add-post.html', context)
