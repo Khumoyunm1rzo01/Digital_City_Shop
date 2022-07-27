@@ -1,4 +1,3 @@
-from math import prod
 from django.shortcuts import render
 from django.shortcuts import redirect
 from rest_framework.response import Response 
@@ -14,12 +13,27 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import authentication_classes, permission_classes
 from rest_framework.authtoken.models import Token
+from rest_framework.authtoken.views import ObtainAuthToken
 # Create your views here.
 
+class CustomAuthToken(ObtainAuthToken):
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data,
+                                           context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        token, created = Token.objects.get_or_create(user=user)
+        return Response({
+            'token': token.key,
+            'user_id': user.pk,
+            'email': user.email
+        })
 
 @api_view(['POST'])
 def User_Register(request):
-    first_name = request.POST.get('first_name') 
+    first_name = request.POST.get('first_name')
+    username = request.POST.get('username') 
     last_name = request.POST.get('last_name')
     password = request.POST.get('password')
     email = request.POST.get('email')
@@ -27,7 +41,7 @@ def User_Register(request):
     card = request.POST.get('card')
     address = request.POST.get('address')
     contact_number = request.POST.get('contact_number')
-    b = User.objects.create(first_name=first_name, last_name=last_name, password=password, email=email, company_name=company_name, card=card, contact_number=contact_number, address=address)
+    b = User.objects.create(first_name=first_name, last_name=last_name, password=password, email=email, company_name=company_name, card=card, contact_number=contact_number, address=address, username=username)
     ser = UserSerializer(b)
     return Response(ser.data)
 
@@ -45,7 +59,11 @@ def On_Sale(request):
     ser = ProductSerializer(a, many=True)
     return Response(ser.data)
 
-
+@api_view(['GET'])
+def Get_Product_Last(request):
+    a = Product.objects.filter().order_by('-id')[:6]
+    ser = ProductSerializer(a, many=True)
+    return Response(ser.data)
 
 @api_view(['GET'])
 def Product_price(request):
@@ -68,12 +86,23 @@ def Join_Newsletter(request):
 
 
 
+
 @api_view(['GET'])
 def product_id(request,pk):
     a = Product.objects.get(id=pk)
     ser = ProductSerializer(a)
     return Response(ser.data)
 
+@api_view(['GET'])
+def Get_Similar(request, pk):
+    product = Product.objects.get(id=pk)
+    for i in product.category:
+        category_id = []
+        category_id.add(i)
+        c = Category.objects.filter(id=category_id)
+        similars = Product.objects.filter(category=c)
+    ser = ProductSerializer(similars, many=True)
+    return Response(ser.data)
 
 @api_view(['GET'])
 def Getproduct(request):
@@ -87,14 +116,20 @@ def Getreview(request):
     ser = ReviewSerializer(a, many=True)
     return Response(ser.data)
 
+@api_view(['GET'])
+def Getcomment(request):
+    a = Comment.objects.all()
+    ser = CommentSerializer(a, many=True)
+    return Response(ser.data)
+
 class Info_View(ListAPIView):
     queryset = Info.objects.all()
     serializer_class = InfoSerializer
 
 @api_view(['GET'])
-def Getblog(request):
-    a = Blog.objects.all()
-    ser = BlogSerializer(a, many=True)
+def Getblog(request, pk):
+    a = Blog.objects.get(id=pk)
+    ser = BlogSerializer(a)
     return Response(ser.data)
 
 
@@ -163,8 +198,8 @@ def Getrequirements(request):
 
 @api_view(['GET'])
 def Gettoptrends(request):
-    c = Top_Trends.objects.all()
-    ser = Top_Trends_Serializer(c, many=True)
+    c = Top_Trends.objects.last()
+    ser = Top_Trends_Serializer(c)
     return Response(ser.data)
 
 @api_view(['GET'])
@@ -173,15 +208,21 @@ def Getdelivery(request):
     ser = Delivery_Options_Serializer(d, many=True)
     return Response(ser.data)
 
+@permission_classes([IsAuthenticated])
+@authentication_classes([TokenAuthentication])
 @api_view(['GET'])
 def Getorder(request):
-    e = Order.objects.all()
+    user = request.user
+    e = Order.objects.filter(user=user)
     ser = OrderSerializer(e, many=True)
     return Response(ser.data)
 
+@permission_classes([IsAuthenticated])
+@authentication_classes([TokenAuthentication])
 @api_view(['GET'])
 def Getorderitem(request):
-    f = OrderItem.objects.all()
+    user = request.user
+    f = OrderItem.objects.filter(user=user)
     ser = OrderItemSerializer(f, many=True)
     return Response(ser.data)
 
@@ -220,6 +261,16 @@ def Getbillingdetails(request):
     ser = Billing_Detail_Serializer(j, many=True)
     return Response(ser.data)
 
+@permission_classes([IsAuthenticated])
+@authentication_classes([TokenAuthentication])
+@api_view(['POST'])
+def Postbillingdetails(request):
+    user = request.user
+    country = request.POST.get('country')
+    postcode = request.POST.get('postcode')
+    city = request.POST.get('city')
+    billing = BillingDetails.objects.create(user=user, country=country, postcode=postcode, city=city)
+    return Response({'status': "Muvaffaqiyatli yaratildi!"})
 
 @permission_classes([IsAuthenticated])
 @authentication_classes([TokenAuthentication])

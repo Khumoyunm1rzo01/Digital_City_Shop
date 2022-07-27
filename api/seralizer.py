@@ -5,18 +5,20 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
-        
+        depth = 1
 
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = '__all__'
+        depth = 1
 
 class ColorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Color
         fields = '__all__'
+        depth = 1
 
 
 
@@ -24,12 +26,14 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'
+        depth = 1
 
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = '__all__'
+        depth = 1
 
 class InfoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -56,7 +60,7 @@ class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
         fields = '__all__'
-
+        depth = 1
 
 
 
@@ -81,7 +85,7 @@ class CookiesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cookies
         fields = '__all__'
-
+        depth = 1
 
 
 class ContactSerializer(serializers.ModelSerializer):
@@ -115,6 +119,7 @@ class Top_Trends_Serializer(serializers.ModelSerializer):
     class Meta:
         model = Top_Trends
         fields = "__all__"
+        depth = 1
 
 
 class Delivery_Options_Serializer(serializers.ModelSerializer):
@@ -126,16 +131,19 @@ class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = "__all__"
+        depth = 1
 
 class OrderItemSerializer(serializers.ModelSerializer):
     class Meta: 
         model = OrderItem
         fields = "__all__"
+        depth = 1
 
 class Shipping_Detail_Serializer(serializers.ModelSerializer):
     class Meta:
         model = Shipping_Detail
         fields = "__all__"
+        depth = 1
 
 class CartSerializer(serializers.ModelSerializer):
     class Meta:
@@ -152,7 +160,7 @@ class Billing_Detail_Serializer(serializers.ModelSerializer):
     class Meta:
         model = BillingDetails
         fields = "__all__"
-
+        depth = 1
 
 
 class WishlistSerializer(serializers.ModelSerializer):

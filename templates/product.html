@@ -288,6 +288,7 @@
               <div class="product-wrapper-grid">
                 <div class="row">
                   <div class="col-xl-3 col-sm-6 xl-4">
+                    {% for i in product %}
                     <div class="card">
                       <div class="product-box">
                         <div class="product-img">
@@ -299,7 +300,7 @@
                             </ul>
                           </div>
                         </div>
-                      {% for i in product %}
+                      
                         <div class="modal fade" id="exampleModalCenter3">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                             <div class="modal-content">
@@ -343,9 +344,14 @@
                             <h3>{{ i.price }}</h3>
                           </div>
                         </div>
-                      {% endfor %}
+                      
+
+
+                      
                       </div>
                     </div>
+                  {% endfor %}
+
                   </div>
                   <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
