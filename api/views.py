@@ -16,8 +16,12 @@ from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 # Create your views here.
 
-class CustomAuthToken(ObtainAuthToken):
+from django.http import HttpResponse, HttpResponseNotFound
 
+def Page_404(request):
+        return HttpResponseNotFound('<h1>Page not found</h1>')
+
+class CustomAuthToken(ObtainAuthToken):
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data,
                                            context={'request': request})
@@ -29,6 +33,7 @@ class CustomAuthToken(ObtainAuthToken):
             'user_id': user.pk,
             'email': user.email
         })
+
 
 @api_view(['POST'])
 def User_Register(request):
@@ -111,10 +116,23 @@ def Getproduct(request):
     return Response(ser.data)
 
 @api_view(['GET'])
-def Getreview(request):
-    a = Review.objects.all()
+def Getreview(request, pk):
+    a = Review.objects.filter(product__id=pk)
     ser = ReviewSerializer(a, many=True)
     return Response(ser.data)
+
+@permission_classes([IsAuthenticated])
+@authentication_classes([TokenAuthentication])
+@api_view(['POST'])
+def Create_Review(request):
+    review = request.POST.get('review')
+    user = request.user
+    rating = request.POST.get('rating')
+    pk = request.POST.get('product')
+    product = Product.objects.get(id=pk)
+    a = Review.objects.create(product=product, rating=rating, user=user, review=review)
+    ser = ReviewSerializer(a)
+    return Response(ser.data,)
 
 @api_view(['GET'])
 def Getcomment(request):
@@ -146,16 +164,25 @@ def Postcontact(request):
     return Response(ser.data)
 
 
-@permission_classes([IsAuthenticated])
-@authentication_classes([TokenAuthentication])
+# @permission_classes([IsAuthenticated])
+# @authentication_classes([TokenAuthentication])
 @api_view(['POST'])
 def Postcomment(request):
     user = request.user
+    print(request.user)
     website = request.POST.get('website')
     comment = request.POST.get('comment')
-    c = Comment.objects.create(user=user, website=website, comment=comment)
+    blog_id = request.POST['blog']
+    blog = Blog.objects.get(id=blog_id)
+    c = Comment.objects.create(
+        user=user, 
+        website=website, 
+        comment=comment, 
+        blog=blog
+        )
     ser = CommentSerializer(c)
     return Response(ser.data)
+
 
 @permission_classes([IsAuthenticated])
 @authentication_classes([TokenAuthentication])
@@ -281,7 +308,6 @@ def Edit_Rating(request, pk):
     product.rating = rating
     product.save()
     return Response({'status': "Muvaffaqiyatli o'zgartirildi!"})
-    
 
 
 @api_view(['GET'])
@@ -293,11 +319,6 @@ def Count_Rating(request, pk):
         stars.append(i.rating)
     norma = sum(stars)/soni
     return Response({"soni":soni,"norma":norma})
-            
-    
-    
-
-
 
 @permission_classes([IsAuthenticated])
 @authentication_classes([TokenAuthentication])
@@ -320,9 +341,9 @@ def Add_Cart(request):
 @api_view(['POST'])
 def Add_Wishlist(request):
     user = request.user
-    ads = request.POST.get('id') 
+    ads = request.POST.get('id')
     a = Product.objects.get(id=ads)
-    username = request.POST.get('username') 
+    username = request.POST.get('username')
     user1 = User.objects.get(username=username)
     b = Wishlist.objects.create(user=user1, product=a)
     ser = WishlistSerializer(b)
@@ -385,7 +406,6 @@ def Blogs_Get(request):
 
 def Avatars(request):
     context = {
-        
     }
     return render(request, 'avatars.html', context)
 

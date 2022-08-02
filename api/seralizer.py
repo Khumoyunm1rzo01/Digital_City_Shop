@@ -78,7 +78,7 @@ class ReplySerializer(serializers.ModelSerializer):
     class Meta:
         model = Reply
         fields = '__all__'
-
+        depth = 1
 
 
 class CookiesSerializer(serializers.ModelSerializer):
@@ -99,6 +99,7 @@ class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
         fields = '__all__'
+        depth = 1
 
 class Privacy_Policy_Serializer(serializers.ModelSerializer):
     class Meta:

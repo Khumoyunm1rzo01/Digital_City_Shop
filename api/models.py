@@ -51,7 +51,7 @@ class Product(models.Model):
     sku = models.IntegerField()
     category = models.ManyToManyField(Category)
     on_sale = models.BooleanField(default=False)
-    sale_percent = models.CharField(max_length=255)
+    sale_percent = models.IntegerField()
     gmail = models.EmailField()
     fb = models.URLField()
     insta = models.URLField()
@@ -60,7 +60,7 @@ class Product(models.Model):
     dimensions = models.CharField(max_length=255)
     colors = models.ManyToManyField(Color)
     material = models.CharField(max_length=255)
-
+    size = models.CharField(max_length=255)
     def __str__(self):
         return self.name
 
@@ -105,15 +105,17 @@ class Blog(models.Model):
 
 
 class Comment(models.Model):
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
-    website = models.URLField(blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    website = models.URLField()
     comment = models.CharField(max_length=255)
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE, blank=True, null=True )
 
 
 class Reply(models.Model):
-    reply_to = models.ForeignKey(Comment, on_delete=models.PROTECT)
+    reply_to = models.ForeignKey(Comment, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     email = models.EmailField()
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE, blank=True, null=True)
     website = models.URLField(blank=True, null=True)
     comment = models.CharField(max_length=255)
 

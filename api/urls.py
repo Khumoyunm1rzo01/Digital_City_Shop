@@ -11,7 +11,7 @@ from .views import *
 urlpatterns = [
     path('post-user_register/', User_Register),
     path('get-slider/', Get_Slider),
-    path('get-review/', Getreview),
+    path('get-review/<int:pk>/', Getreview),
     path('product/filter/sale/', On_Sale),
     path('product/filter/price/', Product_price),
     path('product/latest/', Get_Product_Last),
@@ -46,6 +46,8 @@ urlpatterns = [
     path('count-rating/<int:pk>/', Count_Rating),
     path('get-comment/', Getcomment),
     path('token/', CustomAuthToken.as_view()),
+    path('post-review/', Create_Review),
     # path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
+# handler404 = "Page_404"
