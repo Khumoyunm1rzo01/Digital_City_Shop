@@ -33,7 +33,7 @@ class CustomAuthToken(ObtainAuthToken):
             'user_id': user.pk,
             'email': user.email
         })
-
+ 
 
 @api_view(['POST'])
 def User_Register(request):
@@ -87,10 +87,6 @@ def Join_Newsletter(request):
     if user.news == False:
         user.news = True
     return Response(status=status.HTTP_200_OK)
-
-
-
-
 
 @api_view(['GET'])
 def product_id(request,pk):
@@ -249,7 +245,7 @@ def Getorder(request):
 @api_view(['GET'])
 def Getorderitem(request):
     user = request.user
-    f = OrderItem.objects.filter(user=user)
+    f = OrderItem.objects.filter(order__user=user)
     ser = OrderItemSerializer(f, many=True)
     return Response(ser.data)
 
@@ -308,6 +304,7 @@ def Edit_Rating(request, pk):
     product.rating = rating
     product.save()
     return Response({'status': "Muvaffaqiyatli o'zgartirildi!"})
+
 
 
 @api_view(['GET'])
@@ -416,10 +413,46 @@ def Mahsulot(request):
     return render(request, 'product.html', context)
 
 def Product_Page(request):
+    # pk = request.GET['id']
+    product = Product.objects.all()
+    
     context = {
-        
+        'product': product,
     }
     return render(request, 'product-page.html', context)
+
+
+# def Edit_Product(request, pk):
+#     product = Product.objects.get(id=pk)
+#     name = request.GET('name')
+#     price = request.GET('price')
+#     quantity = request.GET('quantity')
+#     text = request.GET('text')
+#     img_1 = request.GET('img_1')
+#     img_2 = request.GET('img_2')
+#     img_3 = request.GET('img_3')
+#     img_4 = request.GET('img_4')
+#     img_5 = request.GET('img_5')
+#     sku = request.GET('sku')
+#     category = request.GET('category')
+#     on_sale = request.GET('on_sale')
+#     sale_percent = request.GET('sale_percent')
+#     gmail = request.GET('gmail')
+#     fb = request.GET('fb')
+#     insta = request.GET('insta')
+#     tw = request.GET('tw')
+#     weight = request.GET('weight')
+#     dimensions = request.GET('dimensions')
+#     colors = request.GET('colors')
+#     material = request.GET('material')
+#     size = request.GET('size')
+    
+     
+#     context = {
+        
+#     }
+#     return render(request, 'product-page.html', context)
+
 
 def Product_List(request):
     context = {
@@ -507,7 +540,7 @@ def To_Do(request):
 
 def Contact_02(request):
     context = {
-        
+        'contact': Contact.objects.all()
     }
     return render(request, 'contacts.html', context)
 
